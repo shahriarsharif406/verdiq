@@ -49,5 +49,5 @@ Carbon credits fail on trust. The same credit can be sold twice, retired twice, 
 Python · pandas · shapely · networkx · scikit-learn · Streamlit · Plotly · qrcode · fpdf2 · Solidity · Hardhat · ethers · Playwright · (optional) Claude API
 
 ## Links
-* GitHub: *(add the public repo URL)*
+* GitHub: https://github.com/shahriarsharif406/verdiq
 * Demo video: *(add the YouTube URL)*
