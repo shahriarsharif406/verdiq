@@ -134,14 +134,14 @@
       "case_id": "GT-10",
       "fraud_type": 6,
       "name": "Host country and corporate buyer claim the same tonnes",
-      "description": "Bangladesh counted the same 4,267 tCO2 toward its NDC while Northwind Energy retired them for its own claim (no corresponding adjustment).",
+      "description": "Bangladesh counted the same 3,725 tCO2 toward its NDC while Northwind Energy retired them for its own claim (no corresponding adjustment).",
       "expected_rules": [
         "R06"
       ],
       "subject_ids": [
         "HC9001"
       ],
-      "retirement": "R0031"
+      "retirement": "R0028"
     },
     {
       "case_id": "GT-11",

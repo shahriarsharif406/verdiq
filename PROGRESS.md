@@ -1,7 +1,7 @@
 # PROGRESS (live checklist)
 - [x] 1 scaffold + data generator (theme in step 4)
 - [x] 2 engine + tests (14 pass, 8/8 types, P=R=1.0)
-- [ ] 3 smart contract + hardhat tests + replay
+- [x] 3 contract + 13 hardhat tests + replay.js (572 txs, 7 blocked, 568/568 engine parity) + attack.js + chain bridge
 - [ ] 4 dashboard core pages
 - [ ] 5 features A-K
 - [ ] 6 polish, Bangla, README, screenshots

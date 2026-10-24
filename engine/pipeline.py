@@ -110,6 +110,11 @@ def write_outputs(res: Result) -> None:
     res.scores.drop(columns=["why"]).to_csv(OUT / "trust_scores.csv", index=False)
     closes = {d: {k: v for k, v in c.items() if k not in ("records", "_levels")} for d, c in res.closes.items()}
     (OUT / "closes.json").write_text(json.dumps(closes, indent=2), encoding="utf-8")
+    last = res.closes[sorted(res.closes)[-1]]
+    pr = merkle.proof_for_serial(last, last["records"][len(last["records"]) // 2]["start"])
+    sample = dict(date=last["date"], date_int=int(last["date"].replace("-", "")), root=last["root"], path=pr["path"],
+                  record=pr["record"], record_hex=merkle.canon(pr["record"]).hex())
+    (OUT / "sample_proof.json").write_text(json.dumps(sample, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":

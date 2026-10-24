@@ -1,5 +1,5 @@
 claim_id,country,serial_start,serial_end,basis,corresponding_adjustment,date
-HC9001,Bangladesh,5044880,5049146,NDC progress report 2024,False,2025-01-15
+HC9001,Bangladesh,5019086,5022810,NDC progress report 2024,False,2025-01-15
 HC0001,Kenya,6000001,6004091,"Authorised ITMO, corresponding adjustment applied",True,2025-01-15
 HC0002,Kenya,6004092,6011620,"Authorised ITMO, corresponding adjustment applied",True,2025-01-15
 HC0003,Kenya,6011621,6014473,"Authorised ITMO, corresponding adjustment applied",True,2025-01-15

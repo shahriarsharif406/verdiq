@@ -1,14 +1,14 @@
 {
   "name": "verdiq",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "VERDIQ on-chain double-counting firewall (Hardhat)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "replay": "hardhat run scripts/replay.js",
+    "node": "hardhat node"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",

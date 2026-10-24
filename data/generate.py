@@ -200,7 +200,7 @@ def build() -> dict:
          ["R08"], ["T9007"], variant=True)
 
     # ---------------------------------------------------------------- F6 host-country double claim
-    bd_ret = next(r for r in retirements if 1 * BLOCK <= r["serial_start"] < 3 * BLOCK and r["retirement_id"] > "R0030" and r["retirement_id"].startswith("R0"))
+    bd_ret = [r for r in retirements if 1 * BLOCK <= r["serial_start"] < 3 * BLOCK and not r["retirement_id"].startswith("R9") and r["date"] < "2025-01-10"][-1]
     hc = []
     hc.append(dict(claim_id="HC9001", country="Bangladesh", serial_start=bd_ret["serial_start"], serial_end=bd_ret["serial_end"],
                    basis="NDC progress report 2024", corresponding_adjustment=False, date="2025-01-15"))
