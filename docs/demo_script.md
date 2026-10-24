@@ -14,7 +14,7 @@ Numbers on screen are deterministic (seed 42) unless a line says "≈".
 
 ## 0:25 – 0:55 · What VERDIQ found (Overview → Reconciliation)
 **Click:** point at the four counters, then the "8/8 · precision 100 % · recall 100 %" tile.
-**Say:** "We generated a synthetic carbon market, clearly labelled as synthetic, with eight kinds of fraud injected. VERDIQ reconciles 568 ledger events and catches all eight types with zero false positives. About 55,000 tonnes of claims would have been counted twice: roughly 1.5 million dollars of fraudulent volume, the emissions of 12,000 cars for a year."
+**Say:** "We generated a synthetic carbon market, clearly labelled as synthetic, with eight kinds of fraud injected. VERDIQ reconciles 653 ledger events and catches all eight types with zero false positives. About 55,000 tonnes of claims would have been counted twice: roughly 1.5 million dollars of fraudulent volume, the emissions of 12,000 cars for a year."
 **Click:** sidebar **Reconciliation** → tab **Balance per issuance**.
 **Say:** "Like a bank balance: every issuance balances to the tonne. Issued equals unsold plus in-market plus retired. The coral hexagons are tonnes the ledger refused."
 
@@ -28,7 +28,7 @@ Numbers on screen are deterministic (seed 42) unless a line says "≈".
 **Click:** **Map & Forest Health**: point at the project footprints, then scroll to the P01 / P04 / P08 cards.
 **Say:** "Two Sundarbans projects claim 31 percent of the same mangrove polygon. Cusco claims 173 tonnes per hectare where the physical ceiling is 40. Every project gets a 0-100 trust score with a plain-English why. The vegetation series is simulated, and labelled as such."
 **Click:** **Greenwashing Checker** (Meridian Airways is preselected).
-**Say:** "Meridian Airways told the press it offset 350,000 tonnes. The ledger shows 106,000 validly retired, and only 94,000 from credits with no integrity flags. 27 percent of the claim is backed."
+**Say:** "Meridian Airways told the press it offset 400,000 tonnes. The ledger shows 126,000 validly retired, and only 113,000 from credits with no integrity flags. 28 percent of the claim is backed."
 
 ## 2:05 – 3:10 · CLIMAX: Attack Mode
 **Click:** **Attack Mode**. Point at the green **REAL CONTRACT LIVE** badge.

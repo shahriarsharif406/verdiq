@@ -46,6 +46,10 @@ def chain_ready() -> bool:
         return False
     try:
         rep = json.loads(f.read_text(encoding="utf-8"))
+        import hashlib
+        cur = hashlib.sha256((OUT / "reconciliation_events.csv").read_bytes()).hexdigest()
+        if rep.get("events_sha256") != cur:   # ledger changed since the replay: the on-chain state is stale
+            return False
         return rep.get("network") == "localhost" and _rpc("eth_getCode", [rep["contract"], "latest"]) not in ("0x", None)
     except Exception:
         return False
@@ -74,6 +78,11 @@ def ensure_chain(log=print) -> bool:
             time.sleep(0.5)
         else:
             return False
+    else:
+        try:
+            _rpc("hardhat_reset", [])   # a node from an earlier session: start from a clean chain so timestamps can replay
+        except Exception:
+            pass
     log("replaying ledger on-chain…")
     r = subprocess.run([_npx(), "hardhat", "run", "scripts/replay.js", "--network", "localhost"], cwd=ROOT, env=env,
                        capture_output=True, text=True, timeout=600)

@@ -39,6 +39,8 @@ PROJECTS = [
     ("P07", "Kakamega Community Reforestation", "Kenya", "KE", "AR-ACM0003 Afforestation/Reforestation", (34.85, 0.28), 10.0, 7.0, (30000, 32500, 35000), "Western Kenya Agroforestry"),
     ("P08", "Cusco Highland Agroforestry", "Peru", "PE", "AR-ACM0003 Afforestation/Reforestation", (-71.90, -13.50), 2.0, 1.5, (11000, 52000, 11500), "Andes Verde SAC"),
     ("P09", "Sundarbans Blue Carbon Phase II", "Bangladesh", "BD", "VM0033 Tidal Wetland Restoration", (89.23, 22.11), 6.0, 3.0, (14000, 15500, 16000), "Delta Carbon Ventures"),
+    ("P10", "Chattogram Coastal Afforestation", "Bangladesh", "BD", "AR-ACM0003 Afforestation/Reforestation", (91.80, 22.35), 8.0, 5.0, (30000, 32000, 34000), "Chattogram Green Belt Trust"),
+    ("P11", "Lombok Clean Cookstoves", "Indonesia", "ID", "GS-TPDDTEC Improved Cookstoves", (116.30, -8.60), 15.0, 12.0, (40000, 42000, 45000), "Nusa Hearth Cooperative"),
 ]
 VINTAGES = (2021, 2022, 2023)
 

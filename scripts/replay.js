@@ -85,6 +85,7 @@ async function main() {
   }
 
   const out = {
+    events_sha256: require("crypto").createHash("sha256").update(L.fs.readFileSync(L.path.join(L.OUT, "reconciliation_events.csv"))).digest("hex"),
     network: L.hre.network.name, contract: address, authority: deployer.address, generated_by: "scripts/replay.js",
     seconds: (Date.now() - t0) / 1000, total_txs: txs.length, accepted, reverted,
     engine_chain_agreement: { agree, of: events.length, disagreements },

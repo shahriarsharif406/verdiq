@@ -11,7 +11,8 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
-BASE = "http://localhost:8501"
+import os
+BASE = os.environ.get("VERDIQ_URL", "http://localhost:8501")
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = [("overview", ""), ("reconciliation", "reconciliation"), ("map", "map"), ("trust_scores", "trust_scores"), ("fraud_network", "fraud_network"),
          ("time_machine", "time_machine"), ("pre_purchase", "pre_purchase"), ("greenwashing", "greenwashing"), ("attack_mode", "attack_mode"),

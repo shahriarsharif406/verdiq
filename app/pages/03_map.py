@@ -1,4 +1,3 @@
-import pydeck as pdk
 import plotly.graph_objects as go
 import streamlit as st
 from shapely import wkt
@@ -31,25 +30,31 @@ for pid, r in proj.iterrows():
                      coords=[list(c) for c in poly.exterior.coords], lon=poly.centroid.x, lat=poly.centroid.y,
                      color=rgb(theme.TIER_COLOR[tier]), line=rgb(theme.TIER_COLOR[tier], 255), area=float(r.area_ha),
                      flags=int(s.n_flags), method=r.methodology))
-view = pdk.ViewState(latitude=5, longitude=45, zoom=1.9, pitch=0)
 focus = st.selectbox("Zoom to", ["World"] + [f"{r['pid']} · {r['name']}" for r in rows])
-if focus != "World":
-    row = next(r for r in rows if r["pid"] == focus.split(" · ")[0])
-    view = pdk.ViewState(latitude=row["lat"], longitude=row["lon"], zoom=8.5 if row["area"] < 20000 else 7, pitch=35)
-
-layers = [
-    pdk.Layer("PolygonLayer", rows, get_polygon="coords", get_fill_color="color", get_line_color="line", line_width_min_pixels=2,
-              pickable=True, stroked=True, filled=True),
-    # a pulse-sized halo so tiny polygons are visible at world zoom
-    pdk.Layer("ScatterplotLayer", rows, get_position=["lon", "lat"], get_fill_color="color", get_radius=90000, radius_min_pixels=7,
-              radius_max_pixels=22, pickable=True, opacity=0.55),
-    pdk.Layer("TextLayer", rows, get_position=["lon", "lat"], get_text="pid", get_size=13, get_color=[231, 245, 238, 255],
-              get_pixel_offset=[0, -22]),
-]
-tooltip = {"html": "<b>{pid} · {name}</b><br/>{country} · {method}<br/>Trust {score} · {tier}<br/>{area} ha · {flags} flags",
-           "style": {"backgroundColor": "#0C2019", "color": "#E7F5EE", "border": "1px solid #10B981"}}
-st.pydeck_chart(pdk.Deck(layers=layers, initial_view_state=view, tooltip=tooltip,
-                         map_style="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"), height=470)
+fig = go.Figure()
+zoom = None if focus == "World" else next(r for r in rows if r["pid"] == focus.split(" · ")[0])
+for r in rows:
+    xs = [c[0] for c in r["coords"]]
+    ys = [c[1] for c in r["coords"]]
+    col = theme.TIER_COLOR[r["tier"]]
+    hover = (f"<b>{r['pid']} · {r['name']}</b><br>{r['country']} · {r['method']}<br>Trust {r['score']:.0f} · {r['tier']}<br>"
+             f"{r['area']:,.0f} ha · {r['flags']} flags")
+    if zoom is not None:   # footprint outline visible when zoomed in
+        fig.add_trace(go.Scattergeo(lon=xs, lat=ys, mode="lines", fill="toself", line=dict(color=col, width=2), fillcolor="rgba(0,0,0,0)",
+                                    hoverinfo="skip", showlegend=False))
+    fig.add_trace(go.Scattergeo(lon=[r["lon"]], lat=[r["lat"]], mode="markers+text", text=[r["pid"]], textposition="top center",
+                                textfont=dict(color=theme.C["text"], size=12), marker=dict(size=16, color=col, opacity=.85, symbol="hexagon",
+                                line=dict(width=2, color="#E7F5EE")), hovertext=[hover], hoverinfo="text", showlegend=False))
+geo = dict(projection_type="natural earth", showland=True, landcolor="#0C2019", showocean=True, oceancolor="#06130F", showcountries=True,
+           countrycolor="rgba(16,185,129,.28)", coastlinecolor="rgba(16,185,129,.4)", bgcolor="rgba(0,0,0,0)", showframe=False,
+           lataxis_range=[-35, 40], lonaxis_range=[-90, 135])
+if zoom is not None:
+    span = 3 if zoom["area"] > 50000 else (0.8 if zoom["area"] > 5000 else 0.25)
+    geo.update(lataxis_range=[zoom["lat"] - span, zoom["lat"] + span], lonaxis_range=[zoom["lon"] - span * 1.4, zoom["lon"] + span * 1.4],
+               resolution=50, projection_type="mercator")
+fig.update_geos(**geo)
+fig.update_layout(height=480, margin=dict(l=0, r=0, t=0, b=0))
+st.plotly_chart(theme.style_fig(fig), use_container_width=True)
 st.markdown(f"{theme.badge('VERIFIED', 'trust ≥ 85')} {theme.badge('RISKY', '55 – 85')} {theme.badge('BLOCKED', '< 55')}", unsafe_allow_html=True)
 
 st.markdown("### Projects & simulated forest health")

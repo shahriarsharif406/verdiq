@@ -8,3 +8,4 @@ typechain-types/
 data/out/
 .venv/
 .env
+VERDIQ_PROMPT.md

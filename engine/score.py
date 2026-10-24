@@ -1,7 +1,7 @@
 """Trust score 0-100 per project and per credit range, with a plain-English "why". Fully offline.
 
 Components (all explainable):
-  1. Rule flags      - weighted by severity (CRITICAL 25, HIGH 15, MEDIUM 8), diminishing, capped at 70
+  1. Rule flags      - weighted by severity (CRITICAL 25, HIGH 15, MEDIUM 8; geo-overlap 28 and impossible-yield 35), diminishing, capped at 70
   2. Isolation Forest - unsupervised anomaly detector on trade features (size, price vs project median, lag after issuance,
                         counterparty concentration); share of a project's trades in the anomalous tail costs up to 15 pts
   3. Benford's law   - first-digit distribution of reported trade volumes; a project that deviates much more than the
@@ -19,6 +19,8 @@ from sklearn.ensemble import IsolationForest
 from .common import SEV_RANK, overlap, project_of
 
 SEV_W = {"CRITICAL": 25, "HIGH": 15, "MEDIUM": 8, "LOW": 3}
+# project-level integrity failures (the credits themselves are in doubt) weigh more than a single bad trade
+RULE_W = {"R04": 28, "R05": 35}
 RANGE_DIRECT_W = {"CRITICAL": 60, "HIGH": 40, "MEDIUM": 20, "LOW": 5}
 BENFORD = np.array([math.log10(1 + 1 / d) for d in range(1, 10)])
 
@@ -61,10 +63,11 @@ def project_scores(issuances, trades, flags, divergence) -> pd.DataFrame:
     for p in issuances.drop_duplicates("project_id").itertuples():
         pid = p.project_id
         pf = [f for f in flags if f["project_id"] == pid and f["subject_type"] != "claim"]
-        ws = sorted((SEV_W[f["severity"]] for f in pf), reverse=True)
+        ws = sorted((RULE_W.get(f["rule_id"], SEV_W[f["severity"]]) for f in pf), reverse=True)
         pen_rules = min(70.0, sum(w * (0.7 ** i) for i, w in enumerate(ws)))
         a = an[an.project_id == pid]
-        share = float(a.is_outlier.mean()) if len(a) else 0.0
+        flagged_trades = {f["subject_id"] for f in flags if f["subject_type"] == "event"}   # already penalised by a rule
+        share = float((a.is_outlier & ~a.trade_id.isin(flagged_trades)).mean()) if len(a) else 0.0
         pen_iso = min(15.0, share * 100 * 0.9)
         mad, n = ben.get(pid, (float("nan"), 0))
         pen_ben = 0.0 if math.isnan(mad) else float(min(10.0, max(0.0, (mad - med_mad) * 250)))

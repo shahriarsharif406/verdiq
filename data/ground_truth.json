@@ -147,7 +147,7 @@
       "case_id": "GT-11",
       "fraud_type": 8,
       "name": "Greenwashing claim",
-      "description": "Meridian Airways publicly claims 350,000 tCO2 offset but only retired 106,685 tCO2, part of it from credits that fail verification.",
+      "description": "Meridian Airways publicly claims 400,000 tCO2 offset but only retired 125,926 tCO2, part of it from credits that fail verification.",
       "expected_rules": [
         "R09"
       ],

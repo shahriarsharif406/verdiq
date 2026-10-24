@@ -75,11 +75,11 @@ More: [`docs/screenshots/`](docs/screenshots) (all 12 pages + the public verific
 | 5 | Claimed sequestration above the physical ceiling (173 vs 40 tCO₂/ha/yr) | R05 `IMPLAUSIBLE_YIELD` | ✅ |
 | 6 | Host country + corporate buyer claim the same tonnes (Article 6) | R06 `ARTICLE6_DOUBLE_CLAIM` | ✅ |
 | 7 | Wash-trading loop A→B→C→A (3 weeks, price ×2) + 12× price spike | R07 `WASH_TRADE`, R08 `PRICE_SPIKE` | ✅ |
-| 8 | Greenwashing claim (350,000 tCO₂ claimed, 106,685 validly retired) | R09 `GREENWASHING` | ✅ |
+| 8 | Greenwashing claim (400,000 tCO₂ claimed, 125,926 validly retired) | R09 `GREENWASHING` | ✅ |
 
-**Detected 8/8 injected fraud types · precision 1.00 · recall 1.00** (16 flags, 0 false positives on 568 ledger events). A synthetic benchmark: it proves the rules work, not that real-world recall will be 100 %.
+**Detected 8/8 injected fraud types · precision 1.00 · recall 1.00** (16 flags, 0 false positives on 653 ledger events). A synthetic benchmark: it proves the rules work, not that real-world recall will be 100 %.
 
-On the chain side, replaying the same 572 ledger transactions on a Hardhat network: **565 accepted, 7 reverted by the contract**, and the contract and the off-chain engine **agree on all 568 ledger events**. Behavioural fraud (wash loops, price spikes, geo overlap, impossible yield, greenwashing) cannot be seen by a contract that only tracks ownership, which is exactly why the engine exists alongside it.
+On the chain side, replaying the same 657 ledger transactions on a Hardhat network: **650 accepted, 7 reverted by the contract**, and the contract and the off-chain engine **agree on all 653 ledger events**. Behavioural fraud (wash loops, price spikes, geo overlap, impossible yield, greenwashing) cannot be seen by a contract that only tracks ownership, which is exactly why the engine exists alongside it.
 
 ## Features (A–K)
 
@@ -138,7 +138,7 @@ Prerequisites: Python ≥ 3.10, Node ≥ 18 (for the contract; optional, the app
 make setup      # pip install -r requirements.txt && npm install
 make data       # generate synthetic data + run the engine
 make test       # 24 pytest tests + 13 Hardhat contract tests
-make replay     # replay all 572 txs on an in-process Hardhat chain, anchor 44 closes
+make replay     # replay all 657 txs on an in-process Hardhat chain, anchor 44 closes
 make run        # dashboard on http://localhost:8501
 ```
 
@@ -174,7 +174,7 @@ verdiq/
 
 ## Scalability
 
-Real registries (e.g. Verra, Gold Standard) publish serial-level issuance, transfer and retirement data. `engine/` only needs three tables with `serial_start / serial_end / actor / date`, the schema of `data/*.csv`, so ingestion is a column-mapping exercise. The interval ledger is O(log n) per event and the Merkle close is O(n) per snapshot. For on-chain scale, the demo contract's sorted array should be replaced by an interval tree or lot-based accounting, and the hot path (ownership check) should be moved to an L2; the Merkle anchoring design already scales independently of the number of credits (one 32-byte root per day).
+Real registries (e.g. Verra, Gold Standard) publish serial-level issuance, transfer and retirement data. `engine/` only needs three tables with `serial_start / serial_end / actor / date`, the schema of `data/*.csv`, so ingestion is a column-mapping exercise. The interval ledger does O(log n) lookups per event (bisect over sorted segments) and the Merkle close is O(n) per snapshot. For on-chain scale, the demo contract's sorted array should be replaced by an interval tree or lot-based accounting, and the hot path (ownership check) should be moved to an L2; the Merkle anchoring design already scales independently of the number of credits (one 32-byte root per day).
 
 ## Assumptions, conversion factors, limitations
 

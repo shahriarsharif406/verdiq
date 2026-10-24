@@ -18,7 +18,7 @@ Carbon credits fail on trust. The same credit can be sold twice, retired twice, 
 * **Attack Mode**: one click injects a fresh random double-sale or double-retirement; the audience watches the real contract revert it (with a transaction hash) and the engine flag it within seconds.
 * Plus a fraud-network graph, a month-by-month **Time Machine**, a buyer **pre-purchase check and portfolio health** score, a **greenwashing claim checker**, one-click **auditor case files** (Markdown/PDF, optional LLM summary with a template fallback), a simulated **forest-health** view and an animated **Climate Impact Counter**.
 
-**Results on the synthetic benchmark:** 11 injected fraud cases across all 8 fraud types → **8/8 types detected, precision 1.00, recall 1.00** over 568 ledger events. A 572-transaction on-chain replay blocks 7 fraudulent transactions, and the contract and the engine agree on every ledger event. In the demo market, ~55,000 tCO₂ of claims (≈ US$1.5 M of volume) would have been counted twice.
+**Results on the synthetic benchmark:** 11 injected fraud cases across all 8 fraud types → **8/8 types detected, precision 1.00, recall 1.00** over 653 ledger events. A 657-transaction on-chain replay blocks 7 fraudulent transactions, and the contract and the engine agree on every ledger event. In the demo market, ~55,000 tCO₂ of claims (≈ US$1.5 M of volume) would have been counted twice.
 
 ## Track alignment — Carbon Markets & Emissions Transparency
 * **Transparency:** public QR passports, evidence-backed flags, tamper-evident daily closes.
@@ -27,10 +27,10 @@ Carbon credits fail on trust. The same credit can be sold twice, retired twice, 
 * **Practical usefulness:** one engine, three audiences: registries and regulators, buyers, civil society and journalists. Real registries publish serial-level data, so ingestion is a column mapping.
 
 ## How we built it
-* **Data:** a deterministic synthetic generator (9 projects in Bangladesh, Kenya, Peru, Indonesia and Vietnam; ~570 ledger events) with ground-truth fraud cases injected.
+* **Data:** a deterministic synthetic generator (11 projects in Bangladesh, Kenya, Peru, Indonesia and Vietnam; ~650 ledger events) with ground-truth fraud cases injected.
 * **Engine (Python):** pandas, shapely (polygon intersection area), networkx (cycle detection for wash trades), scikit-learn (Isolation Forest), a sorted-interval ownership ledger with split-on-write, and a Merkle tree (sha256, sorted-pair hashing).
 * **Contract (Solidity 0.8 + Hardhat):** `VerdiqRegistry` keeps a sorted array of disjoint serial segments with binary search and splitting: `issue / transfer / retire / registerHostClaim / anchorClose / verifyRecord`. 13 Hardhat tests replay each fraud case, and a Python-generated Merkle proof is verified on-chain in the suite. `scripts/replay.js` replays the full ledger with deterministic impersonated addresses.
-* **App (Streamlit + Plotly + pydeck):** the "Midnight Forest" design system (glass cards, hexagon motif, Space Grotesk / Inter / JetBrains Mono), animated counters, 12 pages, a public `?passport=` route, QR codes and a Bangla / English toggle. A Playwright smoke test loads every page in a real browser.
+* **App (Streamlit + Plotly):** the "Midnight Forest" design system (glass cards, hexagon motif, Space Grotesk / Inter / JetBrains Mono), animated counters, 12 pages, a public `?passport=` route, QR codes and a Bangla / English toggle. A Playwright smoke test loads every page in a real browser.
 
 ## Challenges
 * Making fragmented ownership of *ranges* correct in both Python and Solidity (partial overlaps, straddling ranges, splits) and keeping the two in exact agreement.
@@ -46,7 +46,7 @@ Carbon credits fail on trust. The same credit can be sold twice, retired twice, 
 * Full Bangla localisation of every string and a mobile-first public verifier.
 
 ## Built with
-Python · pandas · shapely · networkx · scikit-learn · Streamlit · Plotly · pydeck · qrcode · fpdf2 · Solidity · Hardhat · ethers · Playwright · (optional) Claude API
+Python · pandas · shapely · networkx · scikit-learn · Streamlit · Plotly · qrcode · fpdf2 · Solidity · Hardhat · ethers · Playwright · (optional) Claude API
 
 ## Links
 * GitHub: *(add the public repo URL)*

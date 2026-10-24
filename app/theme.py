@@ -114,7 +114,7 @@ a {{ color:var(--teal) !important; }}
 .stButton > button[kind="primary"] {{ background:linear-gradient(135deg,#10B981,#2DD4BF); color:#032217; border:none; }}
 .vq-danger .stButton > button {{ background:linear-gradient(135deg,#FB7185,#F43F5E); color:#fff; border:none; font-size:1.1rem; padding:.7rem 1.4rem; box-shadow:0 0 30px -6px rgba(251,113,133,.8); }}
 [data-testid="stMetric"] {{ background:rgba(12,32,25,.6); border:1px solid {C['line']}; border-radius:14px; padding:12px 16px; }}
-[data-testid="stMetricValue"] {{ font-family:'Space Grotesk'; font-size:1.65rem; }}
+[data-testid="stMetricValue"] {{ font-family:'Space Grotesk'; font-size:1.45rem; }}
 [data-testid="stMetricValue"] > div {{ overflow:visible; text-overflow:clip; white-space:normal; }}
 [data-testid="stDataFrame"] {{ border:1px solid {C['line']}; border-radius:12px; }}
 .stTabs [data-baseweb="tab-list"] {{ gap:6px; }}
