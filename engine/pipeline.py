@@ -85,6 +85,25 @@ def impact(res: Result, asof: str | None = None) -> dict:
                 cars_per_year=tonnes / EQUIV_TCO2_PER_CAR_YEAR, trees=tonnes / EQUIV_TCO2_PER_TREE_10YR)
 
 
+def flag_dates(res: Result) -> dict:
+    """Date each flag becomes visible in the market (project-level flags appear when the offending issuance is registered)."""
+    iss = res.data["issuances"]
+    first = iss.groupby("project_id").issuance_date.min().to_dict()
+    by_id = iss.set_index("issuance_id").issuance_date.to_dict()
+    out = {}
+    for f in res.flags:
+        if f.get("date"):
+            out[f["flag_id"]] = f["date"]
+        elif f["rule_id"] == "R05":
+            out[f["flag_id"]] = by_id[f["subject_id"]]
+        elif f["rule_id"] == "R04":
+            ev = f["evidence"][0]["project"]
+            out[f["flag_id"]] = max(first[f["subject_id"]], first[ev])
+        else:
+            out[f["flag_id"]] = first.get(f["project_id"], "2021-01-01")
+    return out
+
+
 def evaluate(res: Result, ground_truth: dict | None = None) -> dict:
     """Detection report versus injected ground truth."""
     gt = ground_truth or json.loads((DATA / "ground_truth.json").read_text(encoding="utf-8"))

@@ -107,3 +107,13 @@ def fire_attack(spec: dict, ledger, classify_fn) -> dict:
     return dict(source="python-simulation", accepted=st == "MATCHED", reason={"DOUBLE_SOLD": "NOT_OWNER", "ORPHAN": "NOT_OWNER", "UNISSUED": "NOT_ISSUED",
                 "DOUBLE_RETIRED": "ALREADY_RETIRED", "RETIRED_NOT_OWNED": "NOT_OWNER"}.get(st, ""), txHash=fake, block=None,
                 gasUsed=None, ms=int((time.time() - t0) * 1000), note="Hardhat node unavailable - Python mirror of the contract rules was used.")
+
+
+def onchain_root(date_iso: str):
+    """Root anchored on the live chain for a close date (None if the chain is offline / not anchored)."""
+    if not chain_ready():
+        return None
+    env = dict(os.environ, CLOSE_DATE=date_iso.replace("-", ""), VERDIQ_REPLAY="1")
+    r = subprocess.run([_npx(), "hardhat", "run", "scripts/onchain.js", "--network", "localhost"], cwd=ROOT, env=env, capture_output=True, text=True, timeout=60)
+    line = next((ln for ln in r.stdout.splitlines() if ln.startswith("ROOT ")), "ROOT error")[5:].strip()
+    return None if line in ("none", "error") else line

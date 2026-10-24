@@ -101,9 +101,7 @@ def score_range(start: int, end: int, flags: list, proj_scores: pd.DataFrame) ->
     pscore = float(ps.iloc[0].score) if len(ps) else 50.0
     score = max(0.0, min(100.0, 100 - direct - 0.4 * (100 - pscore)))
     has_crit = any(f["severity"] == "CRITICAL" for f in hits)
-    verdict = "BLOCKED" if has_crit else ("RISKY" if (hits or pscore < 85) else "SAFE")
-    if verdict == "SAFE" and score < 85:
-        verdict = "RISKY"
+    verdict = "BLOCKED" if has_crit else ("RISKY" if (hits or score < 75) else "SAFE")
     why = [f"{f['rule_id']} {f['rule_name']} ({f['severity']}): {f['reason']}" for f in sorted(hits, key=lambda f: -SEV_RANK[f['severity']])[:5]]
     if not why:
         why = [f"No flags touch this range. Project {pid} trust score is {pscore:.0f}/100."]
