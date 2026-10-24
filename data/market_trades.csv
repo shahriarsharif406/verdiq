@@ -1,0 +1,402 @@
+trade_id,serial_start,serial_end,seller,buyer,price_usd,date
+T0341,14020951,14024875,Western Kenya Agroforestry,Orion Telecom,11.87,2022-02-24
+T0254,10075508,10079427,Borneo Blue Carbon PT,CarbonLink Exchange,15.77,2022-03-01
+T0255,10075508,10079427,CarbonLink Exchange,Northwind Energy,16.81,2022-03-09
+T0303,12016251,12021672,Mekong Growers Alliance,GreenBridge Brokers,11.76,2022-03-16
+T0137,8160978,8169488,Amazonia Conservation SAC,Aurora Carbon Desk,8.33,2022-03-27
+T0074,6036426,6042434,Lake Basin Energy Ltd,GreenBridge Brokers,7.08,2022-03-28
+T0243,10024182,10034352,Borneo Blue Carbon PT,Harbor & Vale Insurance,19.71,2022-03-31
+T0141,8175319,8182269,Amazonia Conservation SAC,Altura Foods,9.18,2022-04-12
+T0073,6029485,6036425,Lake Basin Energy Ltd,Tessera Motors,7.78,2022-04-23
+T0138,8160978,8169488,Aurora Carbon Desk,Northwind Energy,9.0,2022-04-26
+T0334,14004677,14007313,Western Kenya Agroforestry,Tidewater Trading,13.48,2022-04-26
+T0075,6036426,6042434,GreenBridge Brokers,Sable Mining Co,7.71,2022-04-30
+T0249,10049371,10056826,Borneo Blue Carbon PT,Harbor & Vale Insurance,19.42,2022-04-30
+T0304,12016251,12021672,GreenBridge Brokers,Kestrel Logistics,12.93,2022-05-09
+T0001,2000001,2003753,Sundarbans Restoration Trust,Harbor & Vale Insurance,17.37,2022-05-14
+T0135,8154143,8160977,Amazonia Conservation SAC,CarbonLink Exchange,9.41,2022-05-17
+T0039,4032614,4043279,Cumilla Stoves Cooperative,CarbonLink Exchange,6.52,2022-05-19
+T0335,14004677,14007313,Tidewater Trading,Bluepeak Apparel,14.26,2022-05-29
+T0236,10000001,10002464,Borneo Blue Carbon PT,Bluepeak Apparel,18.81,2022-05-31
+T0113,8055219,8066834,Amazonia Conservation SAC,Tidewater Trading,9.26,2022-06-04
+T0108,8041132,8044989,Amazonia Conservation SAC,Tidewater Trading,8.95,2022-06-06
+T0106,8031191,8041131,Amazonia Conservation SAC,Aurora Carbon Desk,9.16,2022-06-09
+T0102,8006416,8015105,Amazonia Conservation SAC,Tidewater Trading,8.47,2022-06-10
+T0040,4032614,4043279,CarbonLink Exchange,Northwind Energy,6.89,2022-06-12
+T0121,8099782,8108891,Amazonia Conservation SAC,Meridian Airways,9.25,2022-06-13
+T0031,4000001,4011105,Cumilla Stoves Cooperative,GreenBridge Brokers,7.27,2022-06-17
+T0100,8000001,8006415,Amazonia Conservation SAC,Tidewater Trading,9.35,2022-06-17
+T0107,8031191,8041131,Aurora Carbon Desk,Meridian Airways,9.65,2022-06-21
+T0307,12027594,12034077,Mekong Growers Alliance,GreenBridge Brokers,10.75,2022-06-21
+T0110,8044990,8050982,Amazonia Conservation SAC,Harbor & Vale Insurance,8.95,2022-06-25
+T0071,6014474,6025713,Lake Basin Energy Ltd,Fjord Bank,7.74,2022-07-02
+T0114,8055219,8066834,Tidewater Trading,Orion Telecom,9.93,2022-07-02
+T0101,8000001,8006415,Tidewater Trading,Orion Telecom,10.29,2022-07-05
+T0109,8041132,8044989,Tidewater Trading,Altura Foods,9.76,2022-07-09
+T0136,8154143,8160977,CarbonLink Exchange,Northwind Energy,10.33,2022-07-11
+T0123,8113277,8119221,Amazonia Conservation SAC,Aurora Carbon Desk,8.99,2022-07-16
+T0300,12000001,12011130,Mekong Growers Alliance,Aurora Carbon Desk,11.06,2022-07-17
+T0041,4043280,4049711,Cumilla Stoves Cooperative,Aurora Carbon Desk,6.84,2022-07-24
+T0339,14016878,14020950,Western Kenya Agroforestry,CarbonLink Exchange,13.13,2022-07-24
+T0103,8006416,8015105,Tidewater Trading,Orion Telecom,9.29,2022-07-29
+T0308,12027594,12034077,GreenBridge Brokers,Bluepeak Apparel,11.74,2022-08-03
+T0247,10045787,10049370,Borneo Blue Carbon PT,CarbonLink Exchange,16.92,2022-08-05
+T0124,8113277,8119221,Aurora Carbon Desk,Altura Foods,9.71,2022-08-08
+T0032,4000001,4011105,GreenBridge Brokers,Meridian Airways,7.7,2022-08-10
+T0143,8186172,8187966,Amazonia Conservation SAC,CarbonLink Exchange,11.3,2022-08-10
+T0301,12000001,12011130,Aurora Carbon Desk,Northwind Energy,11.57,2022-08-16
+T0340,14016878,14020950,CarbonLink Exchange,Orion Telecom,13.95,2022-08-20
+T0248,10045787,10049370,CarbonLink Exchange,Sable Mining Co,18.2,2022-08-24
+T0042,4043280,4049711,Aurora Carbon Desk,Orion Telecom,7.12,2022-09-04
+T0125,8119222,8128843,Amazonia Conservation SAC,Altura Foods,8.36,2022-09-12
+T0144,8186172,8187966,CarbonLink Exchange,Sable Mining Co,12.06,2022-09-14
+T0129,8137925,8144613,Amazonia Conservation SAC,Tidewater Trading,9.4,2022-09-16
+T0305,12021673,12027593,Mekong Growers Alliance,Tidewater Trading,11.31,2022-09-19
+T0357,16006566,16008989,Andes Verde SAC,Orion Telecom,15.6,2022-09-21
+T0133,8148854,8154142,Amazonia Conservation SAC,CarbonLink Exchange,8.18,2022-09-23
+T0007,2017224,2019467,Sundarbans Restoration Trust,CarbonLink Exchange,17.53,2022-09-25
+T0118,8077239,8086451,Amazonia Conservation SAC,Sable Mining Co,8.35,2022-10-09
+T0104,8015106,8026117,Amazonia Conservation SAC,Meridian Airways,8.7,2022-10-12
+T0306,12021673,12027593,Tidewater Trading,Sable Mining Co,12.01,2022-10-12
+T0379,18007474,18012171,Delta Carbon Ventures,CarbonLink Exchange,18.32,2022-10-15
+T0115,8066835,8072746,Amazonia Conservation SAC,Aurora Carbon Desk,9.1,2022-10-16
+T0134,8148854,8154142,CarbonLink Exchange,Altura Foods,8.95,2022-10-16
+T0111,8050983,8055218,Amazonia Conservation SAC,Tidewater Trading,9.56,2022-10-18
+T0250,10056827,10063728,Borneo Blue Carbon PT,Tidewater Trading,18.42,2022-10-31
+T0130,8137925,8144613,Tidewater Trading,Kestrel Logistics,10.2,2022-11-05
+T0380,18007474,18012171,CarbonLink Exchange,Fjord Bank,19.76,2022-11-08
+T0008,2017224,2019467,CarbonLink Exchange,Sable Mining Co,18.51,2022-11-13
+T0116,8066835,8072746,Aurora Carbon Desk,Orion Telecom,10.01,2022-11-16
+T0126,8128844,8135792,Amazonia Conservation SAC,Tidewater Trading,8.49,2022-11-22
+T0333,14000001,14004676,Western Kenya Agroforestry,Kestrel Logistics,15.81,2022-11-24
+T0356,16003937,16006565,Andes Verde SAC,Fjord Bank,14.22,2022-11-26
+T0105,8026118,8031190,Amazonia Conservation SAC,Meridian Airways,9.05,2022-11-30
+T0245,10037181,10045786,Borneo Blue Carbon PT,Tidewater Trading,17.52,2022-12-01
+T0117,8072747,8077238,Amazonia Conservation SAC,Sable Mining Co,8.99,2022-12-02
+T0034,4014037,4017379,Cumilla Stoves Cooperative,CarbonLink Exchange,6.84,2022-12-04
+T0252,10063729,10075507,Borneo Blue Carbon PT,Aurora Carbon Desk,16.41,2022-12-06
+T0251,10056827,10063728,Tidewater Trading,Tessera Motors,20.05,2022-12-07
+T0036,4017380,4024559,Cumilla Stoves Cooperative,CarbonLink Exchange,7.06,2022-12-12
+T0072,6025714,6029484,Lake Basin Energy Ltd,Bluepeak Apparel,7.99,2022-12-12
+T0246,10037181,10045786,Tidewater Trading,Sable Mining Co,18.63,2022-12-12
+T0038,4024560,4032613,Cumilla Stoves Cooperative,Tessera Motors,6.69,2022-12-15
+T0112,8050983,8055218,Tidewater Trading,Harbor & Vale Insurance,9.94,2022-12-16
+T0253,10063729,10075507,Aurora Carbon Desk,Meridian Airways,17.58,2022-12-23
+T0241,10021353,10024181,Borneo Blue Carbon PT,Tidewater Trading,17.28,2022-12-25
+T0336,14007314,14011771,Western Kenya Agroforestry,CarbonLink Exchange,13.46,2022-12-28
+T0139,8169489,8175318,Amazonia Conservation SAC,CarbonLink Exchange,8.92,2023-01-01
+T0002,2003754,2007044,Sundarbans Restoration Trust,Aurora Carbon Desk,16.61,2023-01-04
+T0127,8128844,8135792,Tidewater Trading,Bluepeak Apparel,8.98,2023-01-04
+T0037,4017380,4024559,CarbonLink Exchange,Altura Foods,7.71,2023-01-10
+T0338,14011772,14016877,Western Kenya Agroforestry,Fjord Bank,12.57,2023-01-10
+T0302,12011131,12016250,Mekong Growers Alliance,Northwind Energy,10.09,2023-01-12
+T0244,10034353,10037180,Borneo Blue Carbon PT,Altura Foods,16.86,2023-01-13
+T0069,6011621,6014473,Lake Basin Energy Ltd,CarbonLink Exchange,7.6,2023-01-20
+T0035,4014037,4017379,CarbonLink Exchange,Altura Foods,7.41,2023-01-22
+T0003,2003754,2007044,Aurora Carbon Desk,Harbor & Vale Insurance,17.72,2023-01-25
+T0066,6000001,6004091,Lake Basin Energy Ltd,CarbonLink Exchange,7.89,2023-01-26
+T0237,10002465,10009413,Borneo Blue Carbon PT,GreenBridge Brokers,17.81,2023-01-29
+T0337,14007314,14011771,CarbonLink Exchange,Tessera Motors,14.08,2023-02-02
+T0377,18005414,18007473,Delta Carbon Ventures,CarbonLink Exchange,18.07,2023-02-05
+T0242,10021353,10024181,Tidewater Trading,Fjord Bank,18.72,2023-02-06
+T0006,2011332,2017223,Sundarbans Restoration Trust,Sable Mining Co,16.76,2023-02-07
+T0070,6011621,6014473,CarbonLink Exchange,Meridian Airways,8.29,2023-02-08
+T0131,8144614,8148853,Amazonia Conservation SAC,GreenBridge Brokers,10.56,2023-02-13
+T9001,6000001,6004091,Lake Basin Energy Ltd,Northwind Energy,7.65,2023-02-16
+T0140,8169489,8175318,CarbonLink Exchange,Tessera Motors,9.31,2023-02-18
+T0033,4011106,4014036,Cumilla Stoves Cooperative,Bluepeak Apparel,6.38,2023-02-20
+T0315,12524160,12526267,Mekong Growers Alliance,Tidewater Trading,11.52,2023-02-20
+T0142,8182270,8186171,Amazonia Conservation SAC,Harbor & Vale Insurance,8.31,2023-02-26
+T0316,12524160,12526267,Tidewater Trading,Altura Foods,12.32,2023-02-28
+T0346,14521799,14527424,Western Kenya Agroforestry,CarbonLink Exchange,16.06,2023-03-01
+T0354,16000001,16003936,Andes Verde SAC,CarbonLink Exchange,15.83,2023-03-01
+T0067,6000001,6004091,CarbonLink Exchange,Bluepeak Apparel,8.29,2023-03-03
+T0122,8108892,8113276,Amazonia Conservation SAC,Fjord Bank,8.54,2023-03-04
+T0120,8097194,8099781,Amazonia Conservation SAC,Kestrel Logistics,9.17,2023-03-05
+T0239,10009414,10021352,Borneo Blue Carbon PT,GreenBridge Brokers,17.45,2023-03-09
+T0149,8517601,8521401,Amazonia Conservation SAC,Tidewater Trading,9.55,2023-03-12
+T0068,6004092,6011620,Lake Basin Energy Ltd,Bluepeak Apparel,7.36,2023-03-13
+T0163,8592708,8598412,Amazonia Conservation SAC,Altura Foods,9.72,2023-03-18
+T0376,18000001,18005413,Delta Carbon Ventures,Northwind Energy,16.56,2023-03-19
+T0150,8517601,8521401,Tidewater Trading,Kestrel Logistics,10.03,2023-03-20
+T0153,8530746,8541288,Amazonia Conservation SAC,Aurora Carbon Desk,8.76,2023-03-20
+T0276,10567663,10575062,Borneo Blue Carbon PT,CarbonLink Exchange,17.18,2023-03-20
+T0238,10002465,10009413,GreenBridge Brokers,Orion Telecom,18.59,2023-03-21
+T0119,8086452,8097193,Amazonia Conservation SAC,Orion Telecom,8.81,2023-03-22
+T0378,18005414,18007473,CarbonLink Exchange,Sable Mining Co,19.6,2023-03-24
+T0355,16000001,16003936,CarbonLink Exchange,Northwind Energy,16.57,2023-03-27
+T0051,4533235,4541545,Cumilla Stoves Cooperative,Meridian Airways,7.72,2023-03-28
+T0132,8144614,8148853,GreenBridge Brokers,Orion Telecom,11.21,2023-03-29
+T0277,10567663,10575062,CarbonLink Exchange,Sable Mining Co,18.56,2023-03-30
+T0128,8135793,8137924,Amazonia Conservation SAC,Tessera Motors,9.23,2023-04-05
+T0240,10009414,10021352,GreenBridge Brokers,Harbor & Vale Insurance,18.4,2023-04-05
+T0347,14521799,14527424,CarbonLink Exchange,Kestrel Logistics,17.07,2023-04-05
+T0014,2508937,2512232,Sundarbans Restoration Trust,Aurora Carbon Desk,18.66,2023-04-12
+T0176,8652916,8658901,Amazonia Conservation SAC,Tidewater Trading,9.24,2023-04-14
+T0004,2007045,2011331,Sundarbans Restoration Trust,Aurora Carbon Desk,17.4,2023-04-17
+T0362,16518925,16524979,Andes Verde SAC,CarbonLink Exchange,14.43,2023-04-22
+T0154,8530746,8541288,Aurora Carbon Desk,Orion Telecom,9.47,2023-04-23
+T0156,8553255,8561494,Amazonia Conservation SAC,Northwind Energy,9.23,2023-04-24
+T0368,16533482,16541627,Andes Verde SAC,Tidewater Trading,14.33,2023-04-25
+T0151,8521402,8530745,Amazonia Conservation SAC,GreenBridge Brokers,10.02,2023-04-29
+T0005,2007045,2011331,Aurora Carbon Desk,Northwind Energy,18.47,2023-04-30
+T0313,12521606,12524159,Mekong Growers Alliance,Aurora Carbon Desk,11.63,2023-04-30
+T0309,12500001,12511568,Mekong Growers Alliance,Aurora Carbon Desk,11.63,2023-05-01
+T0174,8644290,8652915,Amazonia Conservation SAC,CarbonLink Exchange,9.77,2023-05-02
+T0274,10557221,10567662,Borneo Blue Carbon PT,Aurora Carbon Desk,18.09,2023-05-02
+T0170,8622275,8634093,Amazonia Conservation SAC,CarbonLink Exchange,9.79,2023-05-05
+T0177,8652916,8658901,Tidewater Trading,Altura Foods,9.79,2023-05-05
+T0360,16508810,16518924,Andes Verde SAC,Tidewater Trading,14.66,2023-05-06
+T0052,4541546,4550611,Cumilla Stoves Cooperative,Altura Foods,7.07,2023-05-08
+T0363,16518925,16524979,CarbonLink Exchange,Northwind Energy,15.7,2023-05-12
+T0366,16529261,16533481,Andes Verde SAC,CarbonLink Exchange,15.31,2023-05-15
+T0164,8598413,8606163,Amazonia Conservation SAC,Meridian Airways,9.49,2023-05-16
+T0171,8622275,8634093,CarbonLink Exchange,Bluepeak Apparel,10.4,2023-05-20
+T0278,10575063,10578985,Borneo Blue Carbon PT,Tidewater Trading,18.34,2023-05-22
+T0015,2508937,2512232,Aurora Carbon Desk,Fjord Bank,19.48,2023-05-27
+T0045,4509868,4514399,Cumilla Stoves Cooperative,Fjord Bank,7.78,2023-05-28
+T0275,10557221,10567662,Aurora Carbon Desk,Fjord Bank,19.82,2023-05-29
+T0314,12521606,12524159,Aurora Carbon Desk,Harbor & Vale Insurance,12.14,2023-05-30
+T0369,16533482,16541627,Tidewater Trading,Altura Foods,15.72,2023-05-31
+T0358,16500001,16508809,Andes Verde SAC,CarbonLink Exchange,15.24,2023-06-02
+T0011,2502902,2504859,Sundarbans Restoration Trust,Tessera Motors,18.16,2023-06-03
+T0268,10539293,10541903,Borneo Blue Carbon PT,Meridian Airways,19.88,2023-06-13
+T0310,12500001,12511568,Aurora Carbon Desk,Kestrel Logistics,12.67,2023-06-13
+T0361,16508810,16518924,Tidewater Trading,Harbor & Vale Insurance,15.97,2023-06-16
+T0152,8521402,8530745,GreenBridge Brokers,Kestrel Logistics,10.9,2023-06-21
+T0161,8583779,8592707,Amazonia Conservation SAC,CarbonLink Exchange,8.97,2023-06-21
+T0279,10575063,10578985,Tidewater Trading,Orion Telecom,19.85,2023-06-24
+T0359,16500001,16508809,CarbonLink Exchange,Meridian Airways,15.88,2023-06-27
+T0175,8644290,8652915,CarbonLink Exchange,Sable Mining Co,10.72,2023-06-29
+T0047,4516806,4522449,Cumilla Stoves Cooperative,Aurora Carbon Desk,6.58,2023-06-30
+T0016,2512233,2514670,Sundarbans Restoration Trust,Sable Mining Co,19.62,2023-07-01
+T0147,8506521,8517600,Amazonia Conservation SAC,GreenBridge Brokers,8.95,2023-07-02
+T0162,8583779,8592707,CarbonLink Exchange,Orion Telecom,9.52,2023-07-04
+T0367,16529261,16533481,CarbonLink Exchange,Sable Mining Co,16.7,2023-07-09
+T0049,4522450,4533234,Cumilla Stoves Cooperative,GreenBridge Brokers,7.13,2023-07-17
+T0264,10531252,10535040,Borneo Blue Carbon PT,CarbonLink Exchange,19.36,2023-07-17
+T0148,8506521,8517600,GreenBridge Brokers,Fjord Bank,9.77,2023-07-26
+T0385,18510133,18512718,Delta Carbon Ventures,Harbor & Vale Insurance,20.47,2023-07-26
+T0048,4516806,4522449,Aurora Carbon Desk,Kestrel Logistics,6.96,2023-07-28
+T0079,6517118,6524693,Lake Basin Energy Ltd,CarbonLink Exchange,6.82,2023-07-29
+T0342,14500001,14506773,Western Kenya Agroforestry,Aurora Carbon Desk,14.92,2023-07-29
+T0050,4522450,4533234,GreenBridge Brokers,Altura Foods,7.67,2023-07-30
+T0081,6524694,6534734,Lake Basin Energy Ltd,Tidewater Trading,7.23,2023-08-07
+T0080,6517118,6524693,CarbonLink Exchange,Harbor & Vale Insurance,7.19,2023-08-10
+T0311,12511569,12521605,Mekong Growers Alliance,Aurora Carbon Desk,11.24,2023-08-11
+T0083,6534735,6542515,Lake Basin Energy Ltd,CarbonLink Exchange,7.05,2023-08-13
+T0019,2518328,2522814,Sundarbans Restoration Trust,Altura Foods,18.69,2023-08-19
+T0370,16541628,16545160,Andes Verde SAC,Sable Mining Co,15.73,2023-08-21
+T0344,14506774,14517073,Western Kenya Agroforestry,Harbor & Vale Insurance,14.41,2023-08-27
+T0312,12511569,12521605,Aurora Carbon Desk,Harbor & Vale Insurance,12.31,2023-08-29
+T0178,8658902,8669256,Amazonia Conservation SAC,Fjord Bank,7.94,2023-08-31
+T0172,8634094,8644289,Amazonia Conservation SAC,Aurora Carbon Desk,9.56,2023-09-02
+T0265,10531252,10535040,CarbonLink Exchange,Harbor & Vale Insurance,20.4,2023-09-02
+T0270,10550408,10552558,Borneo Blue Carbon PT,Aurora Carbon Desk,17.61,2023-09-02
+T0044,4504427,4509867,Cumilla Stoves Cooperative,Bluepeak Apparel,7.77,2023-09-03
+T0383,18505675,18510132,Delta Carbon Ventures,Aurora Carbon Desk,20.7,2023-09-05
+T0043,4500001,4504426,Cumilla Stoves Cooperative,Meridian Airways,7.22,2023-09-08
+T0084,6534735,6542515,CarbonLink Exchange,Northwind Energy,7.38,2023-09-09
+T0173,8634094,8644289,Aurora Carbon Desk,Meridian Airways,10.21,2023-09-10
+T0158,8572528,8579647,Amazonia Conservation SAC,Orion Telecom,9.12,2023-09-12
+T0053,4550612,4554928,Cumilla Stoves Cooperative,Fjord Bank,6.52,2023-09-16
+T0271,10550408,10552558,Aurora Carbon Desk,Harbor & Vale Insurance,19.22,2023-09-17
+T0343,14500001,14506773,Aurora Carbon Desk,Fjord Bank,15.85,2023-09-24
+T0082,6524694,6534734,Tidewater Trading,Kestrel Logistics,7.78,2023-09-25
+T0009,2500001,2502901,Sundarbans Restoration Trust,CarbonLink Exchange,18.82,2023-10-09
+T0157,8561495,8572527,Amazonia Conservation SAC,Bluepeak Apparel,9.68,2023-10-22
+T0145,8500001,8506520,Amazonia Conservation SAC,GreenBridge Brokers,8.97,2023-10-23
+T0384,18505675,18510132,Aurora Carbon Desk,Fjord Bank,21.62,2023-10-31
+T0077,6510549,6517117,Lake Basin Energy Ltd,Tidewater Trading,7.73,2023-11-02
+T0146,8500001,8506520,GreenBridge Brokers,Kestrel Logistics,9.75,2023-11-02
+T0078,6510549,6517117,Tidewater Trading,Bluepeak Apparel,8.27,2023-11-10
+T0266,10535041,10539292,Borneo Blue Carbon PT,Tidewater Trading,20.42,2023-11-13
+T0182,8685599,8689422,Amazonia Conservation SAC,GreenBridge Brokers,10.46,2023-11-19
+T0010,2500001,2502901,CarbonLink Exchange,Harbor & Vale Insurance,19.94,2023-11-28
+T0364,16524980,16529260,Andes Verde SAC,CarbonLink Exchange,15.86,2023-12-06
+T0076,6500001,6510548,Lake Basin Energy Ltd,Orion Telecom,7.86,2023-12-10
+T0267,10535041,10539292,Tidewater Trading,Kestrel Logistics,21.59,2023-12-10
+T0159,8579648,8583778,Amazonia Conservation SAC,Aurora Carbon Desk,9.51,2023-12-17
+T0179,8669257,8681125,Amazonia Conservation SAC,Orion Telecom,9.63,2023-12-18
+T0183,8685599,8689422,GreenBridge Brokers,Tessera Motors,11.45,2023-12-24
+T0258,10509727,10519658,Borneo Blue Carbon PT,Tidewater Trading,17.82,2023-12-25
+T0317,12526268,12529845,Mekong Growers Alliance,Tidewater Trading,11.48,2023-12-26
+T0017,2514671,2518327,Sundarbans Restoration Trust,CarbonLink Exchange,18.74,2024-01-01
+T0365,16524980,16529260,CarbonLink Exchange,Harbor & Vale Insurance,17.42,2024-01-02
+T0012,2504860,2508936,Sundarbans Restoration Trust,CarbonLink Exchange,17.47,2024-01-10
+T0319,12529846,12534282,Mekong Growers Alliance,Meridian Airways,13.23,2024-01-12
+T0280,10578986,10584239,Borneo Blue Carbon PT,Northwind Energy,20.66,2024-01-14
+T0160,8579648,8583778,Aurora Carbon Desk,Northwind Energy,10.39,2024-01-15
+T0018,2514671,2518327,CarbonLink Exchange,Harbor & Vale Insurance,19.91,2024-01-17
+T0155,8541289,8553254,Amazonia Conservation SAC,Harbor & Vale Insurance,8.92,2024-01-18
+T0345,14517074,14521798,Western Kenya Agroforestry,Bluepeak Apparel,14.83,2024-01-20
+T0180,8681126,8685598,Amazonia Conservation SAC,GreenBridge Brokers,9.23,2024-01-22
+T0381,18500001,18505674,Delta Carbon Ventures,Aurora Carbon Desk,17.6,2024-01-26
+T0013,2504860,2508936,CarbonLink Exchange,Altura Foods,18.95,2024-02-01
+T8000,8689423,8697422,Amazonia Conservation SAC,Tidewater Trading,9.36,2024-02-05
+T0167,8615596,8618410,Amazonia Conservation SAC,Aurora Carbon Desk,9.63,2024-02-06
+T0046,4514400,4516805,Cumilla Stoves Cooperative,Kestrel Logistics,7.71,2024-02-11
+T9004,8689423,8697422,Tidewater Trading,CarbonLink Exchange,17.78,2024-02-12
+T0351,15023051,15028282,Western Kenya Agroforestry,Kestrel Logistics,14.96,2024-02-14
+T0169,8618411,8622274,Amazonia Conservation SAC,Orion Telecom,9.17,2024-02-15
+T0259,10509727,10519658,Tidewater Trading,Altura Foods,18.76,2024-02-15
+T0256,10500001,10509726,Borneo Blue Carbon PT,Tidewater Trading,17.77,2024-02-17
+T9005,8689423,8697422,CarbonLink Exchange,Aurora Carbon Desk,26.21,2024-02-19
+T0181,8681126,8685598,GreenBridge Brokers,Altura Foods,9.88,2024-02-20
+T0318,12526268,12529845,Tidewater Trading,Sable Mining Co,12.22,2024-02-21
+T0382,18500001,18505674,Aurora Carbon Desk,Kestrel Logistics,18.43,2024-02-26
+T9006,8689423,8697422,Aurora Carbon Desk,Tidewater Trading,36.5,2024-02-26
+T0203,9076683,9086031,Amazonia Conservation SAC,Aurora Carbon Desk,11.26,2024-02-29
+T0201,9068357,9076682,Amazonia Conservation SAC,Tidewater Trading,10.69,2024-03-05
+T0257,10500001,10509726,Tidewater Trading,Bluepeak Apparel,18.97,2024-03-06
+T0165,8606164,8615595,Amazonia Conservation SAC,GreenBridge Brokers,9.08,2024-03-08
+T0219,9153566,9158186,Amazonia Conservation SAC,Tidewater Trading,10.31,2024-03-08
+T0168,8615596,8618410,Aurora Carbon Desk,Tessera Motors,10.18,2024-03-10
+T0204,9076683,9086031,Aurora Carbon Desk,Fjord Bank,12.24,2024-03-14
+T0262,10526853,10531251,Borneo Blue Carbon PT,Tidewater Trading,18.07,2024-03-14
+T0272,10552559,10557220,Borneo Blue Carbon PT,Tidewater Trading,20.26,2024-03-16
+T0166,8606164,8615595,GreenBridge Brokers,Tessera Motors,9.53,2024-03-18
+T0260,10519659,10526852,Borneo Blue Carbon PT,Aurora Carbon Desk,18.62,2024-03-18
+T0099,7038082,7047112,Lake Basin Energy Ltd,Sable Mining Co,7.55,2024-03-19
+T0233,9208690,9220319,Amazonia Conservation SAC,Harbor & Vale Insurance,8.88,2024-03-19
+T0325,13016095,13018973,Mekong Growers Alliance,Aurora Carbon Desk,11.16,2024-03-23
+T0392,19011074,19013922,Delta Carbon Ventures,Tidewater Trading,20.07,2024-03-24
+T0292,11050700,11059567,Borneo Blue Carbon PT,GreenBridge Brokers,24.14,2024-03-26
+T0224,9168706,9175383,Amazonia Conservation SAC,GreenBridge Brokers,9.32,2024-03-28
+T0191,9030132,9035276,Amazonia Conservation SAC,GreenBridge Brokers,9.36,2024-03-30
+T0269,10541904,10550407,Borneo Blue Carbon PT,Altura Foods,19.53,2024-04-01
+T0320,13000001,13004807,Mekong Growers Alliance,Meridian Airways,12.19,2024-04-02
+T0089,7014276,7018144,Lake Basin Energy Ltd,CarbonLink Exchange,8.06,2024-04-05
+T0220,9153566,9158186,Tidewater Trading,Kestrel Logistics,10.96,2024-04-07
+T0061,5034941,5044879,Cumilla Stoves Cooperative,Kestrel Logistics,7.72,2024-04-09
+T0352,15028283,15029689,Western Kenya Agroforestry,Tidewater Trading,14.82,2024-04-10
+T0198,9057420,9061686,Amazonia Conservation SAC,Harbor & Vale Insurance,9.68,2024-04-12
+T0283,11010973,11020980,Borneo Blue Carbon PT,Aurora Carbon Desk,17.58,2024-04-15
+T0294,11059568,11068758,Borneo Blue Carbon PT,CarbonLink Exchange,18.66,2024-04-15
+T0261,10519659,10526852,Aurora Carbon Desk,Northwind Energy,20.28,2024-04-19
+T0090,7014276,7018144,CarbonLink Exchange,Meridian Airways,8.78,2024-04-21
+T0228,9182620,9187471,Amazonia Conservation SAC,Fjord Bank,10.44,2024-04-22
+T0273,10552559,10557220,Tidewater Trading,Sable Mining Co,21.89,2024-04-28
+T0221,9158187,9166281,Amazonia Conservation SAC,Tidewater Trading,9.65,2024-04-30
+T0202,9068357,9076682,Tidewater Trading,Northwind Energy,11.21,2024-05-01
+T0393,19011074,19013922,Tidewater Trading,Bluepeak Apparel,20.95,2024-05-03
+T0349,15006841,15014065,Western Kenya Agroforestry,Kestrel Logistics,14.8,2024-05-06
+T0263,10526853,10531251,Tidewater Trading,Orion Telecom,19.31,2024-05-07
+T0293,11050700,11059567,GreenBridge Brokers,Northwind Energy,25.15,2024-05-10
+T0062,5044880,5049146,Cumilla Stoves Cooperative,Northwind Energy,7.06,2024-05-18
+T0192,9030132,9035276,GreenBridge Brokers,Northwind Energy,9.92,2024-05-18
+T0326,13016095,13018973,Aurora Carbon Desk,Tessera Motors,11.82,2024-05-18
+T9007,14527425,14530424,Western Kenya Agroforestry,Orion Telecom,174.72,2024-05-20
+T0284,11010973,11020980,Aurora Carbon Desk,Harbor & Vale Insurance,18.88,2024-05-21
+T0193,9035277,9039423,Amazonia Conservation SAC,Tessera Motors,9.86,2024-05-22
+T0028,3019025,3022560,Sundarbans Restoration Trust,Aurora Carbon Desk,17.95,2024-05-23
+T0211,9108636,9118247,Amazonia Conservation SAC,Northwind Energy,10.86,2024-05-23
+T0225,9168706,9175383,GreenBridge Brokers,Orion Telecom,10.08,2024-05-25
+T0353,15028283,15029689,Tidewater Trading,Orion Telecom,15.76,2024-05-25
+T0386,19000001,19002175,Delta Carbon Ventures,GreenBridge Brokers,20.16,2024-05-26
+T0298,11075703,11081933,Borneo Blue Carbon PT,Aurora Carbon Desk,18.73,2024-06-02
+T0374,17007529,17009252,Andes Verde SAC,GreenBridge Brokers,15.07,2024-06-08
+T0295,11059568,11068758,CarbonLink Exchange,Altura Foods,20.44,2024-06-13
+T0029,3019025,3022560,Aurora Carbon Desk,Altura Foods,19.61,2024-06-14
+T9003,10597000,10601999,Borneo Blue Carbon PT,Meridian Airways,17.6,2024-06-14
+T0375,17007529,17009252,GreenBridge Brokers,Orion Telecom,16.3,2024-06-15
+T0222,9158187,9166281,Tidewater Trading,Bluepeak Apparel,10.2,2024-06-17
+T0195,9044136,9050803,Amazonia Conservation SAC,Aurora Carbon Desk,11.18,2024-06-18
+T0209,9098923,9101188,Amazonia Conservation SAC,Northwind Energy,9.54,2024-06-22
+T0299,11075703,11081933,Aurora Carbon Desk,Fjord Bank,20.43,2024-06-24
+T0024,3014209,3015965,Sundarbans Restoration Trust,Aurora Carbon Desk,17.68,2024-06-30
+T0030,3022561,3024244,Sundarbans Restoration Trust,Meridian Airways,17.98,2024-06-30
+T0387,19000001,19002175,GreenBridge Brokers,Altura Foods,22.08,2024-07-04
+T0059,5019086,5024670,Cumilla Stoves Cooperative,Northwind Energy,7.58,2024-07-06
+T0289,11030280,11041114,Borneo Blue Carbon PT,Meridian Airways,19.16,2024-07-10
+T0185,9009382,9019945,Amazonia Conservation SAC,GreenBridge Brokers,9.92,2024-07-13
+T0234,9220320,9227988,Amazonia Conservation SAC,Altura Foods,10.87,2024-07-14
+T0025,3014209,3015965,Aurora Carbon Desk,Tessera Motors,19.22,2024-07-22
+T0296,11068759,11075702,Borneo Blue Carbon PT,CarbonLink Exchange,19.52,2024-08-05
+T0210,9101189,9108635,Amazonia Conservation SAC,Fjord Bank,9.08,2024-08-11
+T0287,11027150,11030279,Borneo Blue Carbon PT,Aurora Carbon Desk,21.71,2024-08-11
+T0054,5000001,5009043,Cumilla Stoves Cooperative,CarbonLink Exchange,8.25,2024-08-12
+T0196,9044136,9050803,Aurora Carbon Desk,Altura Foods,11.76,2024-08-17
+T0373,17005265,17007528,Andes Verde SAC,Fjord Bank,15.5,2024-08-22
+T0189,9026601,9030131,Amazonia Conservation SAC,CarbonLink Exchange,10.02,2024-08-23
+T0194,9039424,9044135,Amazonia Conservation SAC,Kestrel Logistics,9.99,2024-08-24
+T0213,9127746,9135593,Amazonia Conservation SAC,Aurora Carbon Desk,9.97,2024-08-26
+T0085,7000001,7010595,Lake Basin Energy Ltd,CarbonLink Exchange,8.0,2024-08-30
+T0022,3009011,3014208,Sundarbans Restoration Trust,CarbonLink Exchange,18.33,2024-09-02
+T0390,19008450,19011073,Delta Carbon Ventures,CarbonLink Exchange,20.01,2024-09-02
+T0223,9166282,9168705,Amazonia Conservation SAC,Northwind Energy,10.28,2024-09-05
+T0350,15014066,15023050,Western Kenya Agroforestry,Fjord Bank,16.24,2024-09-06
+T0186,9009382,9019945,GreenBridge Brokers,Sable Mining Co,10.7,2024-09-08
+T0026,3015966,3019024,Sundarbans Restoration Trust,GreenBridge Brokers,16.85,2024-09-10
+T0212,9118248,9127745,Amazonia Conservation SAC,Harbor & Vale Insurance,9.41,2024-09-10
+T0288,11027150,11030279,Aurora Carbon Desk,Fjord Bank,23.88,2024-09-10
+T0190,9026601,9030131,CarbonLink Exchange,Altura Foods,10.63,2024-09-12
+T0055,5000001,5009043,CarbonLink Exchange,Orion Telecom,8.81,2024-09-20
+T0371,17000001,17005264,Andes Verde SAC,Tidewater Trading,14.02,2024-09-20
+T0197,9050804,9057419,Amazonia Conservation SAC,Kestrel Logistics,10.4,2024-09-21
+T0297,11068759,11075702,CarbonLink Exchange,Tessera Motors,21.1,2024-09-21
+T0086,7000001,7010595,CarbonLink Exchange,Meridian Airways,8.34,2024-09-23
+T0216,9138947,9145789,Amazonia Conservation SAC,Tidewater Trading,9.17,2024-09-25
+T0214,9127746,9135593,Aurora Carbon Desk,Bluepeak Apparel,10.58,2024-09-26
+T0199,9061687,9068356,Amazonia Conservation SAC,Aurora Carbon Desk,9.6,2024-09-30
+T0064,5052167,5055107,Cumilla Stoves Cooperative,CarbonLink Exchange,7.03,2024-10-01
+T0348,15000001,15006840,Western Kenya Agroforestry,Harbor & Vale Insurance,14.2,2024-10-02
+T0391,19008450,19011073,CarbonLink Exchange,Altura Foods,20.96,2024-10-02
+T0372,17000001,17005264,Tidewater Trading,Fjord Bank,15.32,2024-10-07
+T0060,5024671,5034940,Cumilla Stoves Cooperative,Orion Telecom,6.88,2024-10-15
+T0023,3009011,3014208,CarbonLink Exchange,Harbor & Vale Insurance,19.31,2024-10-16
+T0087,7010596,7014275,Lake Basin Energy Ltd,CarbonLink Exchange,8.4,2024-10-25
+T0095,7028543,7030585,Lake Basin Energy Ltd,Tidewater Trading,7.3,2024-10-25
+T0389,19004948,19008449,Delta Carbon Ventures,Meridian Airways,17.8,2024-10-27
+T0200,9061687,9068356,Aurora Carbon Desk,Kestrel Logistics,10.52,2024-10-29
+T0027,3015966,3019024,GreenBridge Brokers,Orion Telecom,18.19,2024-10-30
+T0217,9138947,9145789,Tidewater Trading,Orion Telecom,9.56,2024-10-30
+T9002,12000001,12002000,Cobalt Carbon Partners,Fjord Bank,10.5,2024-11-03
+T0088,7010596,7014275,CarbonLink Exchange,Sable Mining Co,8.86,2024-11-04
+T0184,9000001,9009381,Amazonia Conservation SAC,Meridian Airways,9.1,2024-11-04
+T0065,5052167,5055107,CarbonLink Exchange,Harbor & Vale Insurance,7.41,2024-11-08
+T0020,3000001,3005863,Sundarbans Restoration Trust,Fjord Bank,20.17,2024-11-11
+T0207,9095521,9098922,Amazonia Conservation SAC,GreenBridge Brokers,9.76,2024-11-15
+T0331,13033238,13038001,Mekong Growers Alliance,GreenBridge Brokers,10.89,2024-11-25
+T0226,9175384,9182619,Amazonia Conservation SAC,CarbonLink Exchange,10.42,2024-11-27
+T0229,9187472,9198847,Amazonia Conservation SAC,GreenBridge Brokers,8.97,2024-11-28
+T0323,13007570,13016094,Mekong Growers Alliance,Tidewater Trading,12.79,2024-11-28
+T0332,13033238,13038001,GreenBridge Brokers,Bluepeak Apparel,11.38,2024-12-03
+T0231,9198848,9208689,Amazonia Conservation SAC,GreenBridge Brokers,9.85,2024-12-10
+T0098,7033752,7038081,Lake Basin Energy Ltd,Orion Telecom,6.9,2024-12-15
+T0290,11041115,11050699,Borneo Blue Carbon PT,CarbonLink Exchange,20.35,2024-12-15
+T0096,7028543,7030585,Tidewater Trading,Kestrel Logistics,7.71,2024-12-16
+T0208,9095521,9098922,GreenBridge Brokers,Harbor & Vale Insurance,10.67,2024-12-16
+T0281,11000001,11010972,Borneo Blue Carbon PT,Aurora Carbon Desk,20.66,2024-12-17
+T0235,9227989,9231109,Amazonia Conservation SAC,Fjord Bank,8.48,2024-12-19
+T0215,9135594,9138946,Amazonia Conservation SAC,Fjord Bank,10.01,2024-12-24
+T0230,9187472,9198847,GreenBridge Brokers,Northwind Energy,9.54,2024-12-24
+T0063,5049147,5052166,Cumilla Stoves Cooperative,Meridian Airways,7.11,2024-12-25
+T0324,13007570,13016094,Tidewater Trading,Bluepeak Apparel,13.88,2024-12-29
+T0282,11000001,11010972,Aurora Carbon Desk,Sable Mining Co,22.32,2024-12-31
+T0205,9086032,9095520,Amazonia Conservation SAC,CarbonLink Exchange,9.72,2025-01-08
+T0285,11020981,11027149,Borneo Blue Carbon PT,Tidewater Trading,22.57,2025-01-08
+T0091,7018145,7021539,Lake Basin Energy Ltd,Aurora Carbon Desk,8.2,2025-01-09
+T0218,9145790,9153565,Amazonia Conservation SAC,Meridian Airways,9.96,2025-01-12
+T0232,9198848,9208689,GreenBridge Brokers,Sable Mining Co,10.52,2025-01-14
+T0321,13004808,13007569,Mekong Growers Alliance,GreenBridge Brokers,11.21,2025-01-15
+T0057,5013824,5019085,Cumilla Stoves Cooperative,Aurora Carbon Desk,8.02,2025-01-17
+T0227,9175384,9182619,CarbonLink Exchange,Altura Foods,11.28,2025-01-18
+T0291,11041115,11050699,CarbonLink Exchange,Kestrel Logistics,21.59,2025-01-20
+T0187,9019946,9026600,Amazonia Conservation SAC,GreenBridge Brokers,9.1,2025-01-24
+T0327,13018974,13030033,Mekong Growers Alliance,GreenBridge Brokers,13.04,2025-01-27
+T0388,19002176,19004947,Delta Carbon Ventures,Northwind Energy,19.58,2025-01-27
+T0097,7030586,7033751,Lake Basin Energy Ltd,Kestrel Logistics,8.29,2025-01-31
+T0206,9086032,9095520,CarbonLink Exchange,Kestrel Logistics,10.36,2025-02-02
+T0056,5009044,5013823,Cumilla Stoves Cooperative,Sable Mining Co,7.76,2025-02-03
+T0322,13004808,13007569,GreenBridge Brokers,Sable Mining Co,12.06,2025-02-04
+T0092,7018145,7021539,Aurora Carbon Desk,Harbor & Vale Insurance,8.97,2025-02-13
+T0058,5013824,5019085,Aurora Carbon Desk,Bluepeak Apparel,8.46,2025-02-18
+T0021,3005864,3009010,Sundarbans Restoration Trust,Orion Telecom,20.29,2025-02-19
+T0188,9019946,9026600,GreenBridge Brokers,Tessera Motors,9.77,2025-02-19
+T0329,13030034,13033237,Mekong Growers Alliance,GreenBridge Brokers,12.73,2025-02-26
+T0286,11020981,11027149,Tidewater Trading,Bluepeak Apparel,23.56,2025-02-28
+T0330,13030034,13033237,GreenBridge Brokers,Sable Mining Co,13.25,2025-03-10
+T0093,7021540,7028542,Lake Basin Energy Ltd,CarbonLink Exchange,7.63,2025-03-12
+T0328,13018974,13030033,GreenBridge Brokers,Bluepeak Apparel,14.05,2025-03-24
+T0094,7021540,7028542,CarbonLink Exchange,Kestrel Logistics,8.23,2025-04-04

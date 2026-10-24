@@ -1,0 +1,168 @@
+retirement_id,serial_start,serial_end,retiring_entity,claimed_for,date
+R0001,2000001,2003753,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2022-06-13
+R0107,10075508,10079427,Northwind Energy,FY2024 customer-flight offsets,2022-07-06
+R0125,12016251,12021672,Kestrel Logistics,FY2024 customer-flight offsets,2022-09-05
+R0104,10045787,10049370,Sable Mining Co,FY2024 Scope 2 residual,2022-09-27
+R0036,6014474,6022199,Fjord Bank,Net-zero programme 2030,2022-10-08
+R0101,10024182,10034352,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2022-10-12
+R0018,4032614,4043279,Northwind Energy,FY2025 voluntary commitment,2022-11-09
+R0058,8160978,8169488,Northwind Energy,FY2023 Scope 1 neutrality,2022-11-17
+R0105,10049371,10053302,Harbor & Vale Insurance,FY2025 voluntary commitment,2022-12-02
+R0052,8055219,8066834,Orion Telecom,FY2024 Scope 2 residual,2022-12-28
+R0038,6036426,6040356,Sable Mining Co,FY2024 Scope 2 residual,2023-01-05
+R0053,8099782,8104494,Meridian Airways,FY2024 customer-flight offsets,2023-01-05
+R0055,8119222,8128843,Altura Foods,FY2024 customer-flight offsets,2023-02-02
+R0149,16003937,16006565,Fjord Bank,FY2024 Scope 2 residual,2023-02-20
+R0103,10037181,10045786,Sable Mining Co,FY2024 Scope 2 residual,2023-02-25
+R0049,8000001,8005052,Orion Telecom,Net-zero programme 2030,2023-03-17
+R0097,10000001,10002464,Bluepeak Apparel,Net-zero programme 2030,2023-03-21
+R0016,4011106,4012566,Bluepeak Apparel,FY2025 voluntary commitment,2023-03-27
+R0060,8186172,8187966,Sable Mining Co,FY2025 voluntary commitment,2023-04-05
+R0034,6004092,6011620,Bluepeak Apparel,FY2025 voluntary commitment,2023-04-06
+R0160,18007474,18012171,Fjord Bank,FY2023 Scope 1 neutrality,2023-04-17
+R0037,6025714,6027336,Bluepeak Apparel,FY2023 Scope 1 neutrality,2023-04-30
+R0002,2003754,2006068,Harbor & Vale Insurance,FY2024 customer-flight offsets,2023-05-01
+R0063,8517601,8519920,Kestrel Logistics,FY2024 customer-flight offsets,2023-05-06
+R0139,14011772,14016877,Fjord Bank,FY2024 customer-flight offsets,2023-05-07
+R0051,8026118,8031190,Meridian Airways,FY2024 customer-flight offsets,2023-05-11
+R0124,12011131,12014661,Northwind Energy,FY2024 customer-flight offsets,2023-05-18
+R0015,4000001,4011105,Meridian Airways,FY2024 Scope 2 residual,2023-05-23
+R0050,8015106,8026117,Meridian Airways,FY2023 Scope 1 neutrality,2023-05-26
+R0106,10056827,10062292,Tessera Motors,FY2023 Scope 1 neutrality,2023-05-28
+R0003,2007045,2011331,Northwind Energy,FY2024 customer-flight offsets,2023-06-06
+R0159,18000001,18002462,Northwind Energy,FY2024 Scope 2 residual,2023-06-10
+R0102,10034353,10035971,Altura Foods,Net-zero programme 2030,2023-06-12
+R0129,12524160,12526267,Altura Foods,FY2023 Scope 1 neutrality,2023-06-14
+R0004,2011332,2013796,Sable Mining Co,Net-zero programme 2030,2023-06-18
+R0064,8530746,8535272,Orion Telecom,Net-zero programme 2030,2023-06-18
+R0137,14000001,14004676,Kestrel Logistics,FY2024 Scope 2 residual,2023-06-21
+R0150,16006566,16008469,Orion Telecom,FY2024 customer-flight offsets,2023-06-21
+R0019,4043280,4048177,Orion Telecom,FY2023 Scope 1 neutrality,2023-06-25
+R0099,10009414,10021352,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2023-07-01
+R0142,14521799,14525602,Kestrel Logistics,Net-zero programme 2030,2023-07-06
+R0017,4014037,4017379,Altura Foods,FY2024 customer-flight offsets,2023-07-09
+R0073,8652916,8658901,Altura Foods,FY2025 voluntary commitment,2023-07-17
+R0098,10002465,10009413,Orion Telecom,Net-zero programme 2030,2023-07-18
+R0023,4533235,4538842,Meridian Airways,Net-zero programme 2030,2023-07-21
+R0156,16533482,16541627,Altura Foods,FY2024 customer-flight offsets,2023-08-01
+R0056,8128844,8135792,Bluepeak Apparel,Net-zero programme 2030,2023-08-09
+R0138,14007314,14009689,Tessera Motors,Net-zero programme 2030,2023-08-30
+R0068,8592708,8598412,Altura Foods,Net-zero programme 2030,2023-09-07
+R0054,8108892,8113276,Fjord Bank,FY2025 voluntary commitment,2023-09-30
+R0059,8182270,8184071,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2023-10-11
+R0009,2518328,2522814,Altura Foods,FY2023 Scope 1 neutrality,2023-10-13
+R0127,12511569,12521605,Harbor & Vale Insurance,FY2025 voluntary commitment,2023-10-13
+R0024,4541546,4546354,Altura Foods,FY2025 voluntary commitment,2023-10-21
+R0035,6011621,6014473,Meridian Airways,FY2023 Scope 1 neutrality,2023-10-23
+R0148,16000001,16003936,Northwind Energy,FY2024 customer-flight offsets,2023-10-26
+R0033,6000001,6004091,Bluepeak Apparel,Net-zero programme 2030,2023-11-05
+R0126,12500001,12507796,Kestrel Logistics,FY2024 customer-flight offsets,2023-11-06
+R0057,8144614,8146863,Orion Telecom,FY2024 Scope 2 residual,2023-11-11
+R0100,10021353,10024181,Fjord Bank,FY2024 customer-flight offsets,2023-11-11
+R0066,8572528,8575641,Orion Telecom,Net-zero programme 2030,2023-11-15
+R0112,10550408,10552558,Harbor & Vale Insurance,Net-zero programme 2030,2023-11-28
+R0067,8583779,8592707,Orion Telecom,FY2025 voluntary commitment,2023-12-08
+R0155,16529261,16533481,Sable Mining Co,FY2024 customer-flight offsets,2023-12-08
+R0069,8598413,8606163,Meridian Airways,FY2024 customer-flight offsets,2023-12-09
+R0062,8506521,8517600,Fjord Bank,FY2024 Scope 2 residual,2023-12-16
+R0074,8658902,8669256,Fjord Bank,FY2024 Scope 2 residual,2023-12-25
+R0041,6517118,6524693,Harbor & Vale Insurance,FY2024 customer-flight offsets,2023-12-26
+R0115,10567663,10575062,Sable Mining Co,Net-zero programme 2030,2023-12-27
+R0153,16518925,16524979,Northwind Energy,FY2024 Scope 2 residual,2024-01-01
+R0043,6534735,6538423,Northwind Energy,FY2024 customer-flight offsets,2024-01-12
+R0141,14506774,14511344,Harbor & Vale Insurance,Net-zero programme 2030,2024-01-16
+R0114,10557221,10567662,Fjord Bank,Net-zero programme 2030,2024-01-27
+R0008,2514671,2517482,Harbor & Vale Insurance,FY2025 voluntary commitment,2024-02-01
+R0152,16508810,16515065,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2024-02-03
+R0128,12521606,12523559,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2024-02-18
+R0072,8644290,8648988,Sable Mining Co,FY2023 Scope 1 neutrality,2024-02-22
+R0061,8500001,8506520,Kestrel Logistics,FY2023 Scope 1 neutrality,2024-03-01
+R0151,16500001,16508809,Meridian Airways,FY2025 voluntary commitment,2024-03-02
+R0007,2512233,2514670,Sable Mining Co,FY2023 Scope 1 neutrality,2024-03-04
+R0162,18505675,18510132,Fjord Bank,FY2023 Scope 1 neutrality,2024-03-04
+R0020,4514400,4515465,Kestrel Logistics,FY2024 customer-flight offsets,2024-03-16
+R0006,2508937,2510952,Fjord Bank,FY2023 Scope 1 neutrality,2024-03-20
+R0076,8681126,8685598,Altura Foods,Net-zero programme 2030,2024-04-04
+R0111,10535041,10537850,Kestrel Logistics,FY2025 voluntary commitment,2024-04-21
+R0146,15023051,15026808,Kestrel Logistics,FY2025 voluntary commitment,2024-04-21
+R0021,4516806,4519855,Kestrel Logistics,FY2024 customer-flight offsets,2024-04-28
+R0039,6500001,6505352,Orion Telecom,FY2023 Scope 1 neutrality,2024-04-28
+R0022,4522450,4528646,Altura Foods,FY2023 Scope 1 neutrality,2024-05-01
+R0071,8634094,8644289,Meridian Airways,FY2025 voluntary commitment,2024-05-01
+R0140,14500001,14506773,Fjord Bank,FY2025 voluntary commitment,2024-05-01
+R0157,16541628,16545160,Sable Mining Co,Net-zero programme 2030,2024-05-10
+R0042,6524694,6534734,Kestrel Logistics,FY2025 voluntary commitment,2024-05-14
+R0110,10531252,10535040,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2024-05-15
+R0040,6510549,6517117,Bluepeak Apparel,Net-zero programme 2030,2024-05-24
+R0065,8561495,8572527,Bluepeak Apparel,FY2023 Scope 1 neutrality,2024-06-05
+R0075,8669257,8677056,Orion Telecom,Net-zero programme 2030,2024-06-15
+R0117,11010973,11016209,Harbor & Vale Insurance,FY2024 customer-flight offsets,2024-06-16
+R0120,11050700,11054419,Northwind Energy,FY2024 customer-flight offsets,2024-06-16
+R0070,8618411,8622274,Orion Telecom,FY2024 customer-flight offsets,2024-06-21
+R0025,4550612,4554928,Fjord Bank,FY2023 Scope 1 neutrality,2024-07-07
+R0130,12526268,12529845,Sable Mining Co,FY2024 Scope 2 residual,2024-07-09
+R0083,9068357,9073260,Northwind Energy,FY2024 customer-flight offsets,2024-07-26
+R0048,7038082,7047112,Sable Mining Co,FY2025 voluntary commitment,2024-07-29
+R0084,9076683,9086031,Fjord Bank,FY2024 customer-flight offsets,2024-07-29
+R0116,10578986,10584239,Northwind Energy,FY2023 Scope 1 neutrality,2024-08-01
+R9003,10597000,10601999,Meridian Airways,FY2024 customer-flight offsets,2024-08-01
+R0108,10500001,10509726,Bluepeak Apparel,FY2025 voluntary commitment,2024-08-03
+R9001,4514400,4515465,Kestrel Logistics,FY2025 voluntary commitment,2024-08-03
+R0123,11075703,11080202,Fjord Bank,FY2025 voluntary commitment,2024-08-07
+R0013,3019025,3021649,Altura Foods,FY2023 Scope 1 neutrality,2024-08-18
+R0005,2504860,2507188,Altura Foods,Net-zero programme 2030,2024-09-07
+R0077,8685599,8689422,Tessera Motors,FY2025 voluntary commitment,2024-09-07
+R0094,9208690,9220319,Harbor & Vale Insurance,FY2024 Scope 2 residual,2024-09-15
+R0134,13016095,13017764,Tessera Motors,Net-zero programme 2030,2024-09-26
+R0145,15014066,15023050,Fjord Bank,FY2025 voluntary commitment,2024-10-05
+R0154,16524980,16529260,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2024-10-06
+R0109,10526853,10531251,Orion Telecom,FY2024 Scope 2 residual,2024-10-08
+R0131,12529846,12534282,Meridian Airways,FY2024 customer-flight offsets,2024-11-04
+R0144,15006841,15014065,Kestrel Logistics,FY2025 voluntary commitment,2024-11-06
+R0093,9182620,9187471,Fjord Bank,FY2025 voluntary commitment,2024-11-07
+R0113,10552559,10557220,Sable Mining Co,FY2024 customer-flight offsets,2024-12-06
+R0147,15028283,15029689,Orion Telecom,FY2024 customer-flight offsets,2024-12-06
+R0161,18500001,18505674,Kestrel Logistics,FY2023 Scope 1 neutrality,2024-12-07
+R0091,9153566,9158186,Kestrel Logistics,Net-zero programme 2030,2024-12-08
+R0121,11059568,11068758,Altura Foods,FY2024 Scope 2 residual,2024-12-09
+R0044,7000001,7010595,Meridian Airways,FY2024 customer-flight offsets,2024-12-11
+R0132,13000001,13003254,Meridian Airways,Net-zero programme 2030,2024-12-16
+R0028,5019086,5022810,Northwind Energy,FY2024 customer-flight offsets,2024-12-30
+R0087,9118248,9127745,Harbor & Vale Insurance,Net-zero programme 2030,2024-12-31
+R0095,9220320,9224228,Altura Foods,FY2025 voluntary commitment,2024-12-31
+R0158,17005265,17007528,Fjord Bank,FY2024 customer-flight offsets,2025-01-03
+R0164,19004948,19007385,Meridian Airways,FY2023 Scope 1 neutrality,2025-01-11
+R0030,5034941,5044879,Kestrel Logistics,FY2023 Scope 1 neutrality,2025-01-25
+R0031,5044880,5049146,Northwind Energy,FY2024 customer-flight offsets,2025-01-26
+R0014,3022561,3024244,Meridian Airways,Net-zero programme 2030,2025-01-30
+R0089,9135594,9138946,Fjord Bank,Net-zero programme 2030,2025-02-17
+R0011,3009011,3014208,Harbor & Vale Insurance,FY2023 Scope 1 neutrality,2025-02-25
+R0010,3000001,3003337,Fjord Bank,FY2025 voluntary commitment,2025-03-14
+R0029,5024671,5032228,Orion Telecom,FY2025 voluntary commitment,2025-03-20
+R0122,11068759,11075702,Tessera Motors,FY2024 customer-flight offsets,2025-03-31
+R0119,11041115,11047728,Kestrel Logistics,FY2023 Scope 1 neutrality,2025-04-02
+R0118,11027150,11029536,Fjord Bank,FY2023 Scope 1 neutrality,2025-04-05
+R0081,9044136,9050803,Altura Foods,FY2024 customer-flight offsets,2025-04-14
+R0027,5013824,5019085,Bluepeak Apparel,FY2024 customer-flight offsets,2025-04-28
+R0046,7030586,7033751,Kestrel Logistics,Net-zero programme 2030,2025-05-02
+R0012,3015966,3019024,Orion Telecom,FY2023 Scope 1 neutrality,2025-05-06
+R0092,9166282,9168705,Northwind Energy,FY2024 Scope 2 residual,2025-05-06
+R0080,9019946,9026600,Tessera Motors,FY2025 voluntary commitment,2025-05-10
+R0032,5052167,5055107,Harbor & Vale Insurance,FY2024 customer-flight offsets,2025-05-14
+R0047,7033752,7036695,Orion Telecom,FY2025 voluntary commitment,2025-05-18
+R0082,9061687,9068356,Kestrel Logistics,FY2024 Scope 2 residual,2025-05-23
+R0045,7021540,7028542,Kestrel Logistics,FY2024 Scope 2 residual,2025-05-27
+R0143,15000001,15006840,Harbor & Vale Insurance,FY2024 customer-flight offsets,2025-05-29
+R0136,13033238,13038001,Bluepeak Apparel,FY2024 customer-flight offsets,2025-06-02
+R0163,19002176,19004947,Northwind Energy,FY2023 Scope 1 neutrality,2025-06-13
+R0096,9227989,9231109,Fjord Bank,FY2025 voluntary commitment,2025-06-24
+R0078,9000001,9009381,Meridian Airways,FY2025 voluntary commitment,2025-07-01
+R0088,9127746,9132037,Bluepeak Apparel,Net-zero programme 2030,2025-07-03
+R0079,9009382,9019945,Sable Mining Co,FY2024 customer-flight offsets,2025-07-05
+R0086,9095521,9098922,Harbor & Vale Insurance,Net-zero programme 2030,2025-07-10
+R0026,5009044,5011404,Sable Mining Co,FY2024 Scope 2 residual,2025-07-26
+R9002,7021540,7028542,Tessera Motors,FY2024 customer-flight offsets,2025-07-26
+R0090,9145790,9153565,Meridian Airways,FY2025 voluntary commitment,2025-08-01
+R0135,13030034,13033237,Sable Mining Co,FY2023 Scope 1 neutrality,2025-08-10
+R0085,9086032,9095520,Kestrel Logistics,FY2024 Scope 2 residual,2025-09-18
+R0133,13007570,13013448,Bluepeak Apparel,Net-zero programme 2030,2025-09-26

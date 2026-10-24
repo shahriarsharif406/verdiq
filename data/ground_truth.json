@@ -1,0 +1,176 @@
+{
+  "note": "SYNTHETIC ground truth for engine evaluation. subject_ids are the entities the engine must flag.",
+  "seed": 42,
+  "fraud_types": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "cases": [
+    {
+      "case_id": "GT-01",
+      "fraud_type": 1,
+      "name": "Same serial range sold to two buyers",
+      "description": "Lake Basin Energy Ltd sold 4,091 tCO2 (Kisumu) to CarbonLink Exchange on 2023-01-26, then sold the identical serial range again 21 days later.",
+      "expected_rules": [
+        "R01"
+      ],
+      "subject_ids": [
+        "T9001"
+      ],
+      "original_trade": "T0066"
+    },
+    {
+      "case_id": "GT-02",
+      "fraud_type": 1,
+      "name": "Phantom sale (seller never held the credits)",
+      "description": "Cobalt Carbon Partners (an unregistered trader) sold 2,000 tCO2 of Mekong rice credits it never acquired.",
+      "expected_rules": [
+        "R10"
+      ],
+      "subject_ids": [
+        "T9002"
+      ],
+      "variant": true
+    },
+    {
+      "case_id": "GT-03",
+      "fraud_type": 2,
+      "name": "Same serial range retired twice",
+      "description": "Kestrel Logistics retired the same 1,066 tCO2 a second time for a different claim.",
+      "expected_rules": [
+        "R02"
+      ],
+      "subject_ids": [
+        "R9001"
+      ],
+      "original_retirement": "R0020"
+    },
+    {
+      "case_id": "GT-04",
+      "fraud_type": 2,
+      "name": "Retired by an entity that is not the owner",
+      "description": "A second company retired credits that were already retired by their owner.",
+      "expected_rules": [
+        "R02"
+      ],
+      "subject_ids": [
+        "R9002"
+      ],
+      "variant": true
+    },
+    {
+      "case_id": "GT-05",
+      "fraud_type": 3,
+      "name": "Credits traded and retired that were never issued",
+      "description": "5,000 tCO2 were sold and then retired from a serial range the registry never issued (Kalimantan).",
+      "expected_rules": [
+        "R03",
+        "R03"
+      ],
+      "subject_ids": [
+        "T9003",
+        "R9003"
+      ]
+    },
+    {
+      "case_id": "GT-06",
+      "fraud_type": 4,
+      "name": "Two projects with overlapping polygons",
+      "description": "Sundarbans Mangrove Restoration (P01) and Sundarbans Blue Carbon Phase II (P09) claim ~85% overlapping mangrove area.",
+      "expected_rules": [
+        "R04"
+      ],
+      "subject_ids": [
+        "P01",
+        "P09"
+      ]
+    },
+    {
+      "case_id": "GT-07",
+      "fraud_type": 5,
+      "name": "Claimed sequestration above the physical ceiling",
+      "description": "Cusco Highland Agroforestry issued 52,000 tCO2 for 300 ha in 2022 (173 tCO2/ha/yr; the ARR physical ceiling is 40).",
+      "expected_rules": [
+        "R05"
+      ],
+      "subject_ids": [
+        "ISS-P08-2022"
+      ]
+    },
+    {
+      "case_id": "GT-08",
+      "fraud_type": 7,
+      "name": "Wash-trading loop",
+      "description": "Tidewater Trading -> CarbonLink Exchange -> Aurora Carbon Desk -> Tidewater Trading: the same 8,000 tCO2 circle among three related desks in 3 weeks, price rising 2x.",
+      "expected_rules": [
+        "R07"
+      ],
+      "subject_ids": [
+        "T9004",
+        "T9005",
+        "T9006"
+      ]
+    },
+    {
+      "case_id": "GT-09",
+      "fraud_type": 7,
+      "name": "Suspicious price spike",
+      "description": "3,000 tCO2 of Kakamega ARR credits traded at 12x the project median price.",
+      "expected_rules": [
+        "R08"
+      ],
+      "subject_ids": [
+        "T9007"
+      ],
+      "variant": true
+    },
+    {
+      "case_id": "GT-10",
+      "fraud_type": 6,
+      "name": "Host country and corporate buyer claim the same tonnes",
+      "description": "Bangladesh counted the same 4,267 tCO2 toward its NDC while Northwind Energy retired them for its own claim (no corresponding adjustment).",
+      "expected_rules": [
+        "R06"
+      ],
+      "subject_ids": [
+        "HC9001"
+      ],
+      "retirement": "R0031"
+    },
+    {
+      "case_id": "GT-11",
+      "fraud_type": 8,
+      "name": "Greenwashing claim",
+      "description": "Meridian Airways publicly claims 350,000 tCO2 offset but only retired 106,685 tCO2, part of it from credits that fail verification.",
+      "expected_rules": [
+        "R09"
+      ],
+      "subject_ids": [
+        "CL9001"
+      ]
+    }
+  ],
+  "expected_subjects": [
+    "CL9001",
+    "HC9001",
+    "ISS-P08-2022",
+    "P01",
+    "P09",
+    "R9001",
+    "R9002",
+    "R9003",
+    "T9001",
+    "T9002",
+    "T9003",
+    "T9004",
+    "T9005",
+    "T9006",
+    "T9007"
+  ]
+}
