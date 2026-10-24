@@ -63,9 +63,9 @@ with c[0]:
                                  bgcolor="rgba(12,32,25,.6)", steps=[dict(range=[0, 55], color="rgba(251,113,133,.25)"), dict(range=[55, 85], color="rgba(251,191,36,.18)"),
                                                                        dict(range=[85, 100], color="rgba(245,196,81,.20)")])))
     st.plotly_chart(theme.style_fig(fig, 250), use_container_width=True)
-c[1].metric("SAFE", int((df.verdict == "SAFE").sum()), f"{int(df[df.verdict=='SAFE'].tco2.sum()):,} tCO₂")
-c[2].metric("RISKY", int((df.verdict == "RISKY").sum()), f"{int(df[df.verdict=='RISKY'].tco2.sum()):,} tCO₂")
-c[3].metric("BLOCKED", int((df.verdict == "BLOCKED").sum()), f"{int(df[df.verdict=='BLOCKED'].tco2.sum()):,} tCO₂")
+c[1].metric("SAFE", int((df.verdict == "SAFE").sum()), f"{int(df[df.verdict=='SAFE'].tco2.sum()):,} tCO₂", delta_color="off", delta_arrow="off")
+c[2].metric("RISKY", int((df.verdict == "RISKY").sum()), f"{int(df[df.verdict=='RISKY'].tco2.sum()):,} tCO₂", delta_color="off", delta_arrow="off")
+c[3].metric("BLOCKED", int((df.verdict == "BLOCKED").sum()), f"{int(df[df.verdict=='BLOCKED'].tco2.sum()):,} tCO₂", delta_color="off", delta_arrow="off")
 
 # replacement inventory: unsold tonnes still at developers, from clean projects
 inv = []
@@ -73,7 +73,8 @@ for s in res.ledger.segs:
     if s.retired or s.owner != iss[iss.project_id == s.project_id].developer.iloc[0]:
         continue
     ps = res.scores[res.scores.project_id == s.project_id].iloc[0]
-    if ps.tier == "VERIFIED" and not sc_mod.score_range(s.start, s.end, res.flags, res.scores)["flags"]:
+    proj_flagged = any(f["project_id"] == s.project_id and f["subject_type"] in ("project", "issuance") for f in res.flags)
+    if ps.tier == "VERIFIED" and not proj_flagged and not sc_mod.score_range(s.start, s.end, res.flags, res.scores)["flags"]:
         inv.append(dict(start=s.start, end=s.end, tco2=s.end - s.start + 1, project=s.project_id, method=cat[s.project_id], score=ps.score,
                         price=res.price_by_project.get(s.project_id, 10)))
 

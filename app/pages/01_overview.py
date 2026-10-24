@@ -14,10 +14,10 @@ rep = data.chain_replay()
 theme.hero(t("hero_title"), t("hero_sub"), tag=t("tagline"))
 
 theme.counters([
-    dict(label=t("m_tonnes"), value=im["tonnes_protected"], tone="gold", sub="tonnes of claims that would have been counted twice"),
-    dict(label=t("m_usd"), value=im["usd_blocked"], prefix="$", tone="coral", sub="traded or retired on invalid / duplicated credits"),
-    dict(label=t("m_cars"), value=im["cars_per_year"], tone="teal", sub="4.6 tCO₂ per passenger car per year (US EPA)"),
-    dict(label=t("m_trees"), value=im["trees"], tone="em", sub="0.060 tCO₂ per seedling over 10 years (US EPA)"),
+    dict(label=t("m_tonnes"), value=im["tonnes_protected"], tone="gold", sub=t("s_tonnes")),
+    dict(label=t("m_usd"), value=im["usd_blocked"], prefix="$", tone="coral", sub=t("s_usd")),
+    dict(label=t("m_cars"), value=im["cars_per_year"], tone="teal", sub=t("s_cars")),
+    dict(label=t("m_trees"), value=im["trees"], tone="em", sub=t("s_trees")),
 ], height=150)
 
 n_events = len(res.events)

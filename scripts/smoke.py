@@ -53,6 +53,16 @@ def main():
                 pg.screenshot(path=str(out / f"_fail_{name}.png"))
             elif shots:
                 pg.screenshot(path=str(out / f"{name}.png"))
+        pg.goto(f"{BASE}/", wait_until="domcontentloaded")
+        ok, _ = check(pg, "bangla", 5)
+        pg.get_by_text("বাংলা").first.click()
+        time.sleep(6)
+        ok = ok and pg.locator('[data-testid="stException"]').count() == 0 and "টন" in pg.inner_text("body")
+        print(("OK  " if ok else "FAIL"), "bangla toggle")
+        if shots:
+            pg.screenshot(path=str(out / "overview_bn.png"))
+        if not ok:
+            fails.append("bangla")
         pg.goto(f"{BASE}/?passport=2507189-2508936", wait_until="domcontentloaded")
         ok, _ = check(pg, "public_passport", 6)
         print(("OK  " if ok else "FAIL"), "public passport route")

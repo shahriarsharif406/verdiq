@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 100 100" role="img" aria-label="VERDIQ logo">
+<defs><linearGradient id="vqg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DD4BF"/><stop offset="1" stop-color="#10B981"/></linearGradient>
+<linearGradient id="vqk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5C451"/><stop offset="1" stop-color="#FBBF24"/></linearGradient></defs>
+<polygon points="50,4 91,27 91,73 50,96 9,73 9,27" fill="#0C2019" stroke="url(#vqg)" stroke-width="4"/>
+<path d="M50 78C30 70 24 48 30 30c18 2 34 12 34 30 0 8-4 14-14 18z" fill="url(#vqg)" opacity=".92"/>
+<path d="M50 78C50 62 52 52 60 40" stroke="#0C2019" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M36 52l9 9 19-23" stroke="url(#vqk)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
