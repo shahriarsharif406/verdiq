@@ -20,3 +20,4 @@
 - [x] 5 docs/devpost_description.md rewritten (problem, solution, track, how it works, stack, challenges, next, limits, AI disclosure, repo link; only the YouTube URL is a placeholder) + docs/devpost_short_fields.md (tagline, 188-char summary, tags, YouTube title/description with chapters).
 - [x] 6 Screenshots refreshed (scripts/smoke.py --shots: all 14 pages OK, Attack Mode shows REAL CONTRACT LIVE). DECISIONS 21-24 added. HUMAN_TODO.md rewritten as short checklist.
 - [x] 7 Pushed to origin/main (f778b95), verified with git log origin/main. 8 HUMAN_TODO final. ALL DONE.
+- [x] Follow-up: final tests 24+13 pass, Attack Mode real contract OK; contact_sheet.png added. gh release FAILED: gh account shahariar-ai has READ-only on shahriarsharif406/verdiq (and lacks workflow scope).
