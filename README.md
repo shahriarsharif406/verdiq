@@ -142,7 +142,19 @@ make replay     # replay all 657 txs on an in-process Hardhat chain, anchor 44 c
 make run        # dashboard on http://localhost:8501
 ```
 
-No `make` (Windows)? Every target is `python verdiq.py <setup|data|test|replay|chain|run|shots|all>`.
+### Windows / no make
+
+`make` is not installed on stock Windows; `verdiq.py` is the real task runner (the Makefile only calls it). In PowerShell or cmd, from the repo folder:
+
+```powershell
+python verdiq.py setup    # pip install -r requirements.txt && npm install
+python verdiq.py data     # generate synthetic data + run the engine
+python verdiq.py test     # 24 pytest tests + 13 Hardhat contract tests
+python verdiq.py replay   # replay all 657 txs on an in-process Hardhat chain, anchor 44 closes
+python verdiq.py run      # dashboard on http://localhost:8501
+```
+
+All tasks: `python verdiq.py <setup|data|test|replay|chain|run|shots|all>`.
 
 Optional extras:
 
@@ -185,6 +197,10 @@ Real registries (e.g. Verra, Gold Standard) publish serial-level issuance, trans
 * **Benford's law** on ~40 trades per project is a screening hint, never a flag by itself; it only adjusts a score when a project deviates more than the portfolio median.
 * **Limits**: single-currency prices; no real KYC identity (parties are deterministic addresses derived from names); the contract is a demo (O(n) segment shifts, no upgradeability, a single registry authority); Sepolia deployment was not done (local Hardhat only); recall 100 % is on injected, rule-shaped fraud.
 * **No external services are required**: no API keys, no paid APIs; fonts and map tiles are loaded from public CDNs when online, and the app degrades gracefully offline.
+
+## AI assistance disclosure
+
+This project was built with **Claude Code** (Anthropic's AI coding agent) under the direction of the human author, who set the goals, constraints and scope; Claude Code wrote the code, tests, documentation and the demo-video pipeline, and every assumption it made on the author's behalf is logged in [docs/DECISIONS.md](docs/DECISIONS.md). The demo-video narration is synthetic text-to-speech. Nothing in the repository was copied from a registry or company dataset.
 
 ## License
 

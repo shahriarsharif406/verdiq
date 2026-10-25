@@ -11,3 +11,9 @@ data/out/
 VERDIQ_PROMPT.md
 docs/demo/work/
 docs/demo/*.mp4
+.env.*
+*.pem
+*.key
+*.log
+secrets*
+.streamlit/secrets.toml

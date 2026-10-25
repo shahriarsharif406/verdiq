@@ -2,12 +2,14 @@
 
 *IEEE ClimateChain Global Hackathon · Track: Carbon Markets & Emissions Transparency*
 
+
+
 > **All data in the demo is synthetic and all vegetation series are simulated.** No real registry, company or government is involved or implied.
 
-## Inspiration
+## The problem
 Carbon credits fail on trust. The same credit can be sold twice, retired twice, claimed by a host country *and* a corporate buyer, or never have been issued; two projects can be paid for the same forest; a company can announce more offsets than it retired. Banks solved this decades ago with a daily three-way reconciliation of voucher, ledger and payment. Carbon markets have no equivalent. We wanted to build one, and make the result verifiable by anyone, not just insiders. The name is *verdict* + *verde*: a verdict on every carbon credit. We built Bangladesh-first (a Bangla / English interface; Sundarbans and Cumilla projects in the data) and global-ready.
 
-## What it does
+## Our solution
 **VERDIQ is a bank-grade three-way reconciliation engine for carbon credits, with a blockchain firewall that makes double counting impossible and a public "Tonne Passport" anyone can verify.**
 
 * **Reconciles** registry issuance × market trades × retirements on an interval ledger of serial ranges and classifies every event: MATCHED, UNISSUED, ORPHAN, DOUBLE_SOLD, DOUBLE_RETIRED, RETIRED_NOT_OWNED.
@@ -26,7 +28,14 @@ Carbon credits fail on trust. The same credit can be sold twice, retired twice, 
 * **Climate impact:** a tonne that is not double-counted is a tonne of mitigation that has to actually happen. The Impact Counter converts blocked claims into car-years and tree-seedlings (US EPA factors, documented in the README).
 * **Practical usefulness:** one engine, three audiences: registries and regulators, buyers, civil society and journalists. Real registries publish serial-level data, so ingestion is a column mapping.
 
-## How we built it
+## How it works
+1. **Ingest** three tables (registry issuance, market trades, retirements) plus host-country and corporate claims, all keyed by serial-number ranges.
+2. **Reconcile** them on an interval ledger: every event is classified and invalid events are flagged and never applied.
+3. **Detect** geometric, physical, Article 6, network and statistical anomalies; score every project and credit range 0-100 with a plain-English reason.
+4. **Block** at the contract: the same ownership and uniqueness rules run in Solidity, so an attempted double sale or double retirement reverts with a reason code and a transaction hash.
+5. **Prove**: each month-end snapshot is a Merkle root anchored on-chain; any credit is verifiable through its public Tonne Passport (QR).
+
+## Tech stack and how we built it
 * **Data:** a deterministic synthetic generator (11 projects in Bangladesh, Kenya, Peru, Indonesia and Vietnam; ~650 ledger events) with ground-truth fraud cases injected.
 * **Engine (Python):** pandas, shapely (polygon intersection area), networkx (cycle detection for wash trades), scikit-learn (Isolation Forest), a sorted-interval ownership ledger with split-on-write, and a Merkle tree (sha256, sorted-pair hashing).
 * **Contract (Solidity 0.8 + Hardhat):** `VerdiqRegistry` keeps a sorted array of disjoint serial segments with binary search and splitting: `issue / transfer / retire / registerHostClaim / anchorClose / verifyRecord`. 13 Hardhat tests replay each fraud case, and a Python-generated Merkle proof is verified on-chain in the suite. `scripts/replay.js` replays the full ledger with deterministic impersonated addresses.
@@ -45,9 +54,15 @@ Carbon credits fail on trust. The same credit can be sold twice, retired twice, 
 * A public API and embeddable verification widget so any marketplace can show a passport badge.
 * Full Bangla localisation of every string and a mobile-first public verifier.
 
+## Honest limits
+All data is synthetic and all vegetation (NDVI-style) series are simulated. Detection was verified only against fraud cases we injected ourselves (100 % recall there does not predict real-world recall). The contract enforces ownership, uniqueness and Article 6 conflicts only; polygons, wash trading, price spikes and greenwashing are engine-side. It runs on a local Hardhat chain, not a testnet. No partnership with any registry or company is claimed.
+
+## AI assistance disclosure
+Built with Claude Code (Anthropic's AI coding agent) under the author's direction; the narration of the demo video is synthetic text-to-speech.
+
 ## Built with
-Python · pandas · shapely · networkx · scikit-learn · Streamlit · Plotly · qrcode · fpdf2 · Solidity · Hardhat · ethers · Playwright · (optional) Claude API
+Python · pandas · shapely · networkx · scikit-learn · Streamlit · Plotly · qrcode · fpdf2 · Solidity · Hardhat · ethers.js · Playwright · Claude Code
 
 ## Links
 * GitHub: https://github.com/shahriarsharif406/verdiq
-* Demo video: *(add the YouTube URL)*
+* Demo video (4:27): <PASTE YOUTUBE URL>

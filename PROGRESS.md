@@ -14,3 +14,8 @@
 
 ## Final-run log (Oct 25)
 - [x] 1 Video: final encode re-run (earlier encode was cut off). docs/demo/verdiq_demo.mp4 267.0 s (4:27) = narration.mp3 267.0 s; 53 frames inspected every 5 s, no errors/stack traces/empty maps; two ~0.5 s navigation flashes (at ~230 s and ~237 s) accepted. Also verdiq_demo_silent.mp4, narration.mp3, demo.srt.
+- [x] 2 Regression: pytest 24 passed, Hardhat 13 passing; fresh clone in temp folder (python verdiq.py data/replay/chain) = 8/8 fraud types, precision/recall 1.00, 44 closes anchored; Attack Mode in the clone via Playwright: double sale + double retirement both BLOCKED with green REAL CONTRACT LIVE (no PYTHON MIRROR), no exceptions.
+- [x] 3 README: Windows / no make section + AI assistance disclosure (honest limits section already present)
+- [x] 4 Secret scan: working tree + all 8 commits clean (no API keys/tokens/.env/personal paths; VERDIQ_PROMPT.md (the build brief, no secrets) was committed in bc04250 and removed in e50b15d; it stays visible in history, judged harmless); .gitignore extended (.env.*, *.pem, *.key, *.log, secrets). Only public identity in history = git author name/email.
+- [x] 5 docs/devpost_description.md rewritten (problem, solution, track, how it works, stack, challenges, next, limits, AI disclosure, repo link; only the YouTube URL is a placeholder) + docs/devpost_short_fields.md (tagline, 188-char summary, tags, YouTube title/description with chapters).
+- [x] 6 Screenshots refreshed (scripts/smoke.py --shots: all 14 pages OK, Attack Mode shows REAL CONTRACT LIVE). DECISIONS 21-24 added. HUMAN_TODO.md rewritten as short checklist.
