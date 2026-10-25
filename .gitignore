@@ -9,3 +9,5 @@ data/out/
 .venv/
 .env
 VERDIQ_PROMPT.md
+docs/demo/work/
+docs/demo/*.mp4

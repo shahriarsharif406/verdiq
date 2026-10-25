@@ -11,3 +11,6 @@
 - [x] clean-clone verification: setup -> data -> test -> replay OK; app runs with no chain replay present (fallbacks work)
 
 ## Next (human): see HUMAN_TODO.md
+
+## Final-run log (Oct 25)
+- [x] 1 Video: final encode re-run (earlier encode was cut off). docs/demo/verdiq_demo.mp4 267.0 s (4:27) = narration.mp3 267.0 s; 53 frames inspected every 5 s, no errors/stack traces/empty maps; two ~0.5 s navigation flashes (at ~230 s and ~237 s) accepted. Also verdiq_demo_silent.mp4, narration.mp3, demo.srt.

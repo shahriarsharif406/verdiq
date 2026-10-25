@@ -96,9 +96,69 @@ def stop_node():
                        capture_output=True)
 
 
+SEL_TRANSFER, SEL_RETIRE = "4ccf16da", "aafe020a"          # keccak4 of transfer(uint64,uint64,address) / retire(uint64,uint64,bytes32)
+KNOWN_CLAIMS = {"FY2026 net-zero claim": "0d1d1e74eede5959e844ed34164d92e22d8223e06521d461f7eeb70270defb63"}   # keccak256 of the claim text
+
+
+def _rpc_raw(method, params):
+    req = urllib.request.Request(f"http://{HOST}:{PORT}", data=json.dumps(dict(jsonrpc="2.0", id=1, method=method, params=params)).encode(),
+                                 headers={"Content-Type": "application/json"})
+    return json.loads(urllib.request.urlopen(req, timeout=30).read())
+
+
+def _fire_rpc(spec: dict):
+    """Direct JSON-RPC to the local node (no Node.js process): ~50 ms. Returns None if the spec needs the script path."""
+    import re
+    rep = json.loads((OUT / "chain_replay.json").read_text(encoding="utf-8"))
+    parties = rep["parties"]
+    actor = parties.get(spec["actor"])
+    if not actor:
+        return None
+    w = lambda n: format(int(n), "064x")
+    if spec["kind"] == "TRADE":
+        to = parties.get(spec["counterparty"])
+        if not to:
+            return None
+        data = "0x" + SEL_TRANSFER + w(spec["start"]) + w(spec["end"]) + to[2:].lower().rjust(64, "0")
+    else:
+        h = KNOWN_CLAIMS.get(spec["counterparty"])
+        if not h:
+            return None
+        data = "0x" + SEL_RETIRE + w(spec["start"]) + w(spec["end"]) + h
+    t0 = time.time()
+    _rpc("hardhat_impersonateAccount", [actor])
+    _rpc("hardhat_setBalance", [actor, "0x56BC75E2D63100000"])
+    tx = {"from": actor, "to": rep["contract"], "data": data, "gas": hex(15_000_000)}
+    call = _rpc_raw("eth_call", [tx, "latest"])
+    reason = ""
+    if "error" in call:
+        m = re.search(r"reason string '([^']+)'", json.dumps(call["error"]))
+        reason = m.group(1) if m else "REVERTED"
+    txh = _rpc("eth_sendTransaction", [tx])
+    rc = None
+    for _ in range(40):
+        rc = _rpc("eth_getTransactionReceipt", [txh])
+        if rc:
+            break
+        time.sleep(0.05)
+    if not rc:
+        return None
+    blk = _rpc("eth_getBlockByNumber", [rc["blockNumber"], False])
+    ok = int(rc["status"], 16) == 1
+    return dict(source="hardhat-node", contract=rep["contract"], accepted=ok, reason="" if ok else reason, txHash=txh,
+                block=int(rc["blockNumber"], 16), gasUsed=int(rc["gasUsed"], 16), ms=int((time.time() - t0) * 1000),
+                chainTime=int(blk["timestamp"], 16))
+
+
 def fire_attack(spec: dict, ledger, classify_fn) -> dict:
     """spec: kind, actor, counterparty, start, end. Tries the real chain, falls back to the Python mirror."""
     if chain_ready():
+        try:
+            res = _fire_rpc(spec)
+            if res:
+                return res
+        except Exception:
+            pass
         env = dict(os.environ, ATTACK_SPEC=json.dumps(spec), VERDIQ_REPLAY="1")
         try:
             r = subprocess.run([_npx(), "hardhat", "run", "scripts/attack.js", "--network", "localhost"], cwd=ROOT, env=env,

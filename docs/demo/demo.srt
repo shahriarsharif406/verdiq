@@ -1,0 +1,272 @@
+1
+00:00:04,150 --> 00:00:07,804
+Carbon credits only work if one credit means one tonne.
+
+2
+00:00:07,844 --> 00:00:11,498
+Today the same credit can be sold twice, retired twice,
+
+3
+00:00:11,538 --> 00:00:17,005
+claimed by a host country and a company at once, or never
+have been issued at all.
+
+4
+00:00:17,045 --> 00:00:21,706
+Banks solved this a century ago with a daily three-way
+reconciliation.
+
+5
+00:00:21,746 --> 00:00:23,385
+Carbon markets never did.
+
+6
+00:00:23,425 --> 00:00:24,393
+This is VERDIQ:
+
+7
+00:00:24,433 --> 00:00:26,206
+every tonne, verified once.
+
+8
+00:00:27,046 --> 00:00:31,366
+Everything you will see is synthetic data, generated for
+this demo,
+
+9
+00:00:31,406 --> 00:00:34,489
+with eight kinds of fraud deliberately injected.
+
+10
+00:00:34,529 --> 00:00:38,654
+VERDIQ reconciles all six hundred and fifty-three ledger
+events,
+
+11
+00:00:38,694 --> 00:00:43,013
+and all 8 injected fraud types were detected in our
+synthetic test,
+
+12
+00:00:43,053 --> 00:00:45,681
+with no false alarms on the clean trades.
+
+13
+00:00:45,721 --> 00:00:51,473
+In this market, about fifty-five thousand tonnes of claims
+would have been counted twice:
+
+14
+00:00:51,513 --> 00:00:58,045
+roughly one and a half million dollars of volume, the
+yearly emissions of about twelve thousand cars.
+
+15
+00:00:58,085 --> 00:01:01,819
+Like a bank balance, every issuance balances to the tonne:
+
+16
+00:01:01,859 --> 00:01:05,138
+issued equals unsold, plus in market, plus retired.
+
+17
+00:01:05,178 --> 00:01:08,326
+The coral hexagons are tonnes the ledger refused.
+
+18
+00:01:09,166 --> 00:01:15,565
+The same eight thousand tonnes circle between three
+trading desks in three weeks while the price doubles.
+
+19
+00:01:15,605 --> 00:01:17,283
+That is a wash-trading loop.
+
+20
+00:01:17,323 --> 00:01:21,882
+Select a node, and you get every flag with its rule,
+severity and evidence.
+
+21
+00:01:21,922 --> 00:01:27,524
+Coral lines mark flows that broke a rule, and the node
+size shows how many tonnes it traded.
+
+22
+00:01:27,564 --> 00:01:30,652
+The Time Machine replays the market month by month.
+
+23
+00:01:30,692 --> 00:01:35,926
+Fraud events pop in at the moment they occur, and the
+protected-tonnes curve steps up.
+
+24
+00:01:38,370 --> 00:01:43,218
+Two Sundarbans projects claim thirty-one percent of the
+same mangrove polygon,
+
+25
+00:01:43,258 --> 00:01:48,044
+and a Cusco project claims one hundred seventy-three
+tonnes per hectare where
+
+26
+00:01:48,084 --> 00:01:49,924
+the physical ceiling is forty.
+
+27
+00:01:49,964 --> 00:01:55,063
+Every project gets a zero to one hundred trust score, with
+a plain-English reason.
+
+28
+00:01:55,103 --> 00:01:58,949
+The vegetation series here is simulated, and labelled as
+such.
+
+29
+00:01:58,989 --> 00:02:00,014
+Now greenwashing.
+
+30
+00:02:00,054 --> 00:02:05,843
+Meridian Airways, a fictional company, told the press it
+offset four hundred thousand tonnes.
+
+31
+00:02:05,883 --> 00:02:10,292
+The ledger shows about one hundred twenty-six thousand
+validly retired,
+
+32
+00:02:10,332 --> 00:02:15,431
+and only about one hundred thirteen thousand from credits
+with no integrity flags.
+
+33
+00:02:15,471 --> 00:02:18,690
+Roughly twenty-eight percent of the claim is backed.
+
+34
+00:02:22,200 --> 00:02:23,833
+Now the part that matters.
+
+35
+00:02:23,873 --> 00:02:26,921
+A fraudster tries to double-count credits, live.
+
+36
+00:02:26,961 --> 00:02:32,069
+That was a real transaction against our Solidity registry
+on a local test chain.
+
+37
+00:02:32,109 --> 00:02:38,504
+The contract reverted it with a reason code, and here is
+the transaction hash, in about two seconds.
+
+38
+00:02:38,544 --> 00:02:43,909
+Independently, the reconciliation engine flagged it, with
+the rule and the evidence.
+
+39
+00:02:43,949 --> 00:02:47,705
+Without VERDIQ, these tonnes would have been counted
+twice.
+
+40
+00:02:47,745 --> 00:02:48,091
+Again:
+
+41
+00:02:48,131 --> 00:02:48,992
+a double sale.
+
+42
+00:02:49,032 --> 00:02:50,536
+And a double retirement.
+
+43
+00:02:50,576 --> 00:02:54,719
+Every attempt is blocked, counted, and added to the impact
+total.
+
+44
+00:02:54,759 --> 00:02:58,451
+The log shows who tried it, how many tonnes were at stake,
+
+45
+00:02:58,491 --> 00:03:02,376
+the reason code, and the transaction that carried the
+revert.
+
+46
+00:03:11,367 --> 00:03:12,653
+Banks close the day.
+
+47
+00:03:12,693 --> 00:03:14,377
+Now carbon markets do too:
+
+48
+00:03:14,417 --> 00:03:18,356
+every month-end snapshot is a Merkle root anchored
+on-chain.
+
+49
+00:03:18,396 --> 00:03:23,794
+Pick any serial and prove it with a handful of hashes,
+without seeing the dataset.
+
+50
+00:03:23,834 --> 00:03:28,105
+Watch what happens when one field of the record is
+tampered with:
+
+51
+00:03:28,145 --> 00:03:31,354
+the proof fails, and the original verifies again.
+
+52
+00:03:31,394 --> 00:03:36,129
+Every credit range also gets a passport, with its
+timeline, owner chain,
+
+53
+00:03:36,169 --> 00:03:40,904
+trust score, Merkle proof, and the transaction hash of any
+blocked sale.
+
+54
+00:03:40,944 --> 00:03:44,750
+The QR code opens a public page with no login, so a buyer,
+
+55
+00:03:44,790 --> 00:03:48,663
+a journalist or a regulator can verify a credit in
+seconds.
+
+56
+00:03:57,557 --> 00:04:01,874
+VERDIQ turns carbon credits from promises into audited
+facts:
+
+57
+00:04:01,914 --> 00:04:08,231
+reconciled daily, blocked on a chain, and verifiable by
+anyone, in Bangla and in English.
+
+58
+00:04:08,271 --> 00:04:13,302
+All data in this demo is synthetic, the vegetation signal
+is simulated,
+
+59
+00:04:13,342 --> 00:04:17,373
+and we claim no partnership with any registry or company.
+
+60
+00:04:17,413 --> 00:04:19,301
+Every tonne, verified once.
