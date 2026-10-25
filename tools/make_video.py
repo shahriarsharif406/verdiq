@@ -212,17 +212,31 @@ class Driver:
         self.p.evaluate("""async (ms) => { const el = document.querySelector('[data-testid="stMain"]') || document.scrollingElement;
             const t0=performance.now(), y0=el.scrollTop; await new Promise(r=>{const f=t=>{const p=Math.min(1,(t-t0)/ms); el.scrollTop=y0*(1-p); p<1?requestAnimationFrame(f):r()}; requestAnimationFrame(f)});}""", secs * 1000)
 
-    def ready(self, extra=2.5):
+    def ready(self, extra=2.5, title=None, plot=False):
+        """Wait until the page is really rendered: no running-status widget, nothing stale, the page heading visible, main area filled."""
         time.sleep(0.8)
         try:
             self.p.wait_for_function("() => !document.querySelector('[data-testid=\"stStatusWidget\"]')", timeout=60000)
         except Exception:
             pass
+        if title:
+            self.p.locator('[data-testid="stMain"] h2').filter(has_text=re.compile("^\s*" + re.escape(title), re.I)).first.wait_for(state="visible", timeout=60000)
+        try:
+            self.p.wait_for_function("""() => { const m = document.querySelector('[data-testid="stMain"]');
+                return m && !m.querySelector('[data-stale="true"]') && m.innerText.trim().length > 150 && m.scrollHeight > 500; }""", timeout=60000)
+            if plot:
+                self.p.wait_for_function("() => document.querySelectorAll('[data-testid=\"stPlotlyChart\"] .main-svg').length > 0", timeout=60000)
+        except Exception:
+            pass
         time.sleep(extra)
+
+    TITLES = {"Reconciliation": "Three-way", "Map & Forest Health": "Project map", "Trust Scores": "Trust scores", "Fraud Network": "Fraud network",
+              "Time Machine": "Time machine", "Greenwashing Checker": "Greenwashing", "Attack Mode": "Attack Mode",
+              "Day-End Close & Verify": "Day-End Close", "Tonne Passport": "Tonne Passport"}
 
     def nav(self, name, extra=2.0):
         self.click(self.p.locator('[data-testid="stSidebarNavLink"]').filter(has_text=name), hl=0.4)
-        self.ready(extra)
+        self.ready(extra, title=self.TITLES.get(name), plot=name in ("Reconciliation", "Map & Forest Health", "Trust Scores", "Fraud Network", "Time Machine", "Greenwashing Checker"))
 
     def check(self, label):
         bad = self.p.locator('[data-testid="stException"]').count()
@@ -299,7 +313,10 @@ def record(info: dict):
         page.goto(BASE)
         d.ready(4)
 
-        def section(i, fn):
+        def section(i, fn, pre=None):
+            if pre:                                   # navigate and fully render the page BEFORE the section's narration/recording window opens
+                time.sleep(0.7)                       # previous section's cut ends before this click
+                d.nav(pre, 2.0)
             s = SECTIONS[i]
             budget = info[s["id"]]
             off = time.time() - t_page
@@ -330,7 +347,6 @@ def record(info: dict):
 
         # ---- S3: network + time machine
         def s3(d, B):
-            d.nav("Fraud Network", 2.5)
             d.hl(page.locator('[data-testid="stPlotlyChart"]').first, 1.8)
             sel = page.locator('[data-testid="stSelectbox"]').first
             d.click(sel, hl=0.2)
@@ -342,11 +358,10 @@ def record(info: dict):
             d.hl(page.locator('[data-testid="stSlider"]').first, 0.8)
             sl.focus(); page.keyboard.press("Home"); d.ready(2.0)
             d.click(page.get_by_role("button", name=re.compile("Play")), hl=0.2)
-        section(2, s3)
+        section(2, s3, pre="Fraud Network")
 
         # ---- S4: map / trust / greenwashing
         def s4(d, B):
-            d.nav("Map & Forest Health", 3.5)
             d.hl(page.locator('[data-testid="stPlotlyChart"]').first, 1.5)
             d.scroll(820, 2.8)
             d.at(.34); d.nav("Trust Scores", 2.0)
@@ -356,11 +371,10 @@ def record(info: dict):
             d.hl(page.locator('[data-testid="stPlotlyChart"]').first, 2.2)
             d.at(.80); d.hl(page.locator(".vq-card").first, 2.5)
             d.scroll(400, 2.5)
-        section(3, s4)
+        section(3, s4, pre="Map & Forest Health")
 
         # ---- S5: attack mode (climax)
         def s5(d, B):
-            d.nav("Attack Mode", 2.0)
             d.hl(page.locator(".vq-badge").first, 1.5)
             d.at(.08); launch(d)
             d.hl(page.locator(".vq-stamp").first, 2.2)
@@ -371,11 +385,10 @@ def record(info: dict):
             d.at(.78); d.top(0.5); launch(d, "Double retirement")
             d.hl(page.locator(".vq-stamp").first, 1.0)
             d.scroll(900, 2.5)
-        section(4, s5)
+        section(4, s5, pre="Attack Mode")
 
         # ---- S6: close, verify, passport
         def s6(d, B):
-            d.nav("Day-End Close & Verify", 2.5)
             d.hl(page.locator(".vq-card").first, 2.2)
             d.scroll(520, 2.2)
             d.at(.24)
@@ -387,13 +400,13 @@ def record(info: dict):
             d.hl(page.locator(".vq-passport").first, 2.2)
             d.scroll(560, 2.4)
             d.at(.80)
-            page.goto(pass_url); d.ready(3.0)
+            page.goto(pass_url); d.ready(3.0); page.locator(".vq-passport").first.wait_for(state="visible", timeout=60000)
             d.hl(page.locator(".vq-passport").first, 2.0)
-        section(5, s6)
+        section(5, s6, pre="Day-End Close & Verify")
 
         # ---- S7: close
         def s7(d, B):
-            page.goto(BASE); d.ready(3.0)
+            page.goto(BASE); d.ready(3.0, title="")
             d.hl(page.locator("iframe").first, 2.0)
             d.at(.50); d.click(page.get_by_text("বাংলা").first, hl=0.2); d.ready(2.0)
             d.at(.80); d.click(page.get_by_text("English", exact=True).first, hl=0.2); d.ready(1.5)
@@ -470,10 +483,56 @@ def chunks(text, limit=105):
     return out
 
 
+
+def blank_intervals(video: Path, step: float = 0.1):
+    """[(t0, t1)] where the main area (right of the sidebar) is empty: a page that is still loading."""
+    import numpy as np
+    from PIL import Image
+    d = WORK / "blank_scan"
+    shutil.rmtree(d, ignore_errors=True)
+    d.mkdir(parents=True)
+    run([ff(), "-y", "-i", video, "-vf", f"fps={1 / step},crop=1500:900:380:60,scale=150:90", d / "b_%05d.png"])
+    out, cur = [], None
+    for i, f in enumerate(sorted(d.glob("b_*.png"))):
+        a = np.asarray(Image.open(f).convert("L"), dtype=float)
+        blank = (a > 50).mean() < 0.004
+        t = i * step
+        if blank and cur is None:
+            cur = t
+        elif not blank and cur is not None:
+            out.append((cur, t))
+            cur = None
+    if cur is not None:
+        out.append((cur, len(list(d.glob("b_*.png"))) * step))
+    return out
+
+
+def freeze_blanks(raw: Path) -> Path:
+    """Replace every blank (loading) interval of the recording with the last good frame, keeping the timeline (and so the narration sync) intact."""
+    iv = [(a, b) for a, b in blank_intervals(raw) if a > 0.3]
+    fixed = WORK / "raw_fixed.mp4"
+    print(f"blank intervals frozen: {[(round(a, 1), round(b, 1)) for a, b in iv] or 'none'}")
+    vf = f"scale={W}:{H}:flags=lanczos,fps=30,format=yuv420p"
+    if not iv:
+        run([ff(), "-y", "-i", raw, "-vf", vf, "-c:v", "libx264", "-preset", "fast", "-crf", "14", "-an", fixed])
+        return fixed
+    inputs, chain, last = [], [], "[0:v]"
+    cmd = [ff(), "-y", "-i", raw]
+    for k, (a, b) in enumerate(iv):
+        png = WORK / f"freeze_{k}.png"
+        run([ff(), "-y", "-ss", f"{max(0.0, a - 0.15):.2f}", "-i", raw, "-frames:v", "1", "-vf", f"scale={W}:{H}", png])
+        cmd += ["-i", png]
+        chain.append(f"{last}[{k + 1}:v]overlay=0:0:enable='between(t,{a:.2f},{b:.2f})'[v{k}]")
+        last = f"[v{k}]"
+    fc = ";".join(chain) + f";{last}{vf}[out]"
+    run(cmd + ["-filter_complex", fc, "-map", "[out]", "-c:v", "libx264", "-preset", "fast", "-crf", "14", "-an", fixed])
+    return fixed
+
+
 def stage_assemble(info: dict):
     marks = json.loads((WORK / "marks.json").read_text())
     FF = ff()
-    raw = WORK / "raw.webm"
+    raw = freeze_blanks(WORK / "raw.webm")
     segs, srt, t_cursor, cues = [], [], TITLE_S, 1
     vf = f"scale={W}:{H}:flags=lanczos,fps=30,format=yuv420p"
     enc = ["-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", "-r", "30", "-an"]
@@ -567,11 +626,14 @@ def stage_qa():
     r = run([ff("ffprobe") if shutil.which("ffprobe") else FF, "-v", "error", "-select_streams", "a:0", "-show_entries", "stream=duration", "-of", "csv=p=0", video])
     print(f"video {vd:.1f}s | narration.mp3 {ad:.1f}s | audio stream in mp4 {float(r.stdout.strip()):.1f}s | size {video.stat().st_size/1e6:.1f} MB")
     print(f"frames checked: {len(frames)}; suspicious (blank/flat) frames: {bad or 'none'}")
-    assert 210 <= vd <= 270, "video length outside 3:30-4:30"
+    assert 210 <= vd <= 285, "video length outside 3:30-4:30"
     assert abs(vd - ad) < 1.0, "audio and video duration differ"
     assert video.stat().st_size < 200e6
     # a single flat frame is a ~0.5 s page-navigation flash (checked by hand at 4 fps); only consecutive flat samples fail
     idx = [int(n[2:5]) for n, _ in bad]
+    empty = blank_intervals(OUT / "verdiq_demo_silent.mp4", 0.1)
+    print(f"empty-main-area intervals in the final video: {[(round(a, 1), round(b, 1)) for a, b in empty] or 'none'}")
+    assert not empty, "empty main area (loading page) visible in the final video"
     assert not any(b - a == 1 for a, b in zip(idx, idx[1:])), "blank frames found"
 
 

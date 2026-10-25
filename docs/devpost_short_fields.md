@@ -15,7 +15,7 @@ python, pandas, shapely, networkx, scikit-learn, streamlit, plotly, solidity, ha
 
 **Links:**
 * Code: https://github.com/shahriarsharif406/verdiq
-* Video: your YouTube URL
+* Video: https://youtu.be/Oz-Mwghk9Zw
 
 **Thumbnail / image gallery:** `docs/screenshots/overview.png` (thumbnail), `attack_mode.png`, `tonne_passport.png`, `fraud_network.png`, `day_end_close.png`, `greenwashing.png`, `time_machine.png`, `overview_bn.png`
 

@@ -11,6 +11,8 @@
 
 # VERDIQ — *Every tonne, verified once.*
 
+**Demo video:** https://youtu.be/Oz-Mwghk9Zw
+
 > Name = *verdict* + *verde* (green): **a verdict on every carbon credit.**
 
 **VERDIQ is a bank-grade three-way reconciliation engine for carbon credits, with a blockchain firewall that makes double counting impossible and a public “Tonne Passport” anyone can verify.**
